@@ -1,0 +1,42 @@
+@import 'fonts/Tournedos/index.css';
+
+html, body {
+	font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+
+* { box-sizing: border-box; }
+
+h1 {
+	font-family: 'Tournedos', 'Arial Black', 'Arial';
+	font-weight: bold;
+	font-size: 3em;
+	line-height: 1em;
+	margin: 0.25em 0;
+}
+
+.button--text {
+	font-size: 1em;
+	display: inline;
+	margin-bottom: 0;
+	background-color: transparent;
+	border: 0;
+	min-width: 0;
+	padding: 0;
+	border-radius: 0;
+	cursor: pointer;
+	text-decoration: none;
+  
+	color: #0272B6;
+
+	&:hover, &:active {
+		background-color: transparent;
+		border-color: transparent;
+		color: #015383;
+	}
+  }

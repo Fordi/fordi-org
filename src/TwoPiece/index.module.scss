@@ -1,0 +1,21 @@
+.twoPiece {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.top, .bottom {
+  overflow: hidden;
+  flex: 1 1 auto;
+  height: 0;
+  transition: height 0.4s;
+}
+.top-selected .top {
+  height: 100vh;
+}
+.bottom-selected .bottom {
+  height: 100vh;
+}
