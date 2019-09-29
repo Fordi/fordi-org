@@ -33,13 +33,4 @@
 @import url("//hello.myfonts.net/count/3a2d04");
 
 
-@font-face {font-family: 'Tournedos'; font-weight: 400; src: url('./3A2D04_0_0.eot');src: url('./3A2D04_0_0.eot?#iefix') format('embedded-opentype'),url('./3A2D04_0_0.woff2') format('woff2'),url('./3A2D04_0_0.woff') format('woff'),url('./3A2D04_0_0.ttf') format('truetype');}
-
-
-@font-face {font-family: 'Tournedos'; font-weight: 400; font-style: italic; src: url('./3A2D04_1_0.eot');src: url('./3A2D04_1_0.eot?#iefix') format('embedded-opentype'),url('./3A2D04_1_0.woff2') format('woff2'),url('./3A2D04_1_0.woff') format('woff'),url('./3A2D04_1_0.ttf') format('truetype');}
-
-
 @font-face {font-family: 'Tournedos';font-weight: 700; src: url('./3A2D04_2_0.eot');src: url('./3A2D04_2_0.eot?#iefix') format('embedded-opentype'),url('./3A2D04_2_0.woff2') format('woff2'),url('./3A2D04_2_0.woff') format('woff'),url('./3A2D04_2_0.ttf') format('truetype');}
-
-
-@font-face {font-family: 'Tournedos'; font-style: italic; font-weight: 700; src: url('./3A2D04_3_0.eot');src: url('./3A2D04_3_0.eot?#iefix') format('embedded-opentype'),url('./3A2D04_3_0.woff2') format('woff2'),url('./3A2D04_3_0.woff') format('woff'),url('./3A2D04_3_0.ttf') format('truetype');}
