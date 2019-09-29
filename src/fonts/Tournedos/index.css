@@ -1,30 +1,30 @@
 /**
  * @license
  * MyFonts Webfont Build ID 3812612, 2019-09-28T11:44:33-0400
- * 
+ *
  * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
+ * Agreement(s) entered into by the website owner. All other parties are
  * explicitly restricted from using the Licensed Webfonts(s).
- * 
+ *
  * You may obtain a valid license at the URLs below.
- * 
+ *
  * Webfont: TournedosLite-Regular by Hanoded
  * URL: https://www.myfonts.com/fonts/hanoded/tournedos/lite-regular/
- * 
+ *
  * Webfont: TournedosLite-Italic by Hanoded
  * URL: https://www.myfonts.com/fonts/hanoded/tournedos/lite-italic/
- * 
+ *
  * Webfont: Tournedos-Regular by Hanoded
  * URL: https://www.myfonts.com/fonts/hanoded/tournedos/regular/
- * 
+ *
  * Webfont: Tournedos-Italic by Hanoded
  * URL: https://www.myfonts.com/fonts/hanoded/tournedos/italic/
- * 
- * 
+ *
+ *
  * License: https://www.myfonts.com/viewlicense?type=web&buildid=3812612
  * Licensed pageviews: 10,000
  * Webfonts copyright: Copyright (c) 2019 by David Kerkhoff. All rights reserved.
- * 
+ *
  * © 2019 MyFonts Inc
 */
 
@@ -32,15 +32,14 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/3a2d04");
 
-  
+
 @font-face {font-family: 'Tournedos'; font-weight: 400; src: url('./3A2D04_0_0.eot');src: url('./3A2D04_0_0.eot?#iefix') format('embedded-opentype'),url('./3A2D04_0_0.woff2') format('woff2'),url('./3A2D04_0_0.woff') format('woff'),url('./3A2D04_0_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'TournedosLite'; font-weight: 400; font-style: italic; src: url('./3A2D04_1_0.eot');src: url('./3A2D04_1_0.eot?#iefix') format('embedded-opentype'),url('./3A2D04_1_0.woff2') format('woff2'),url('./3A2D04_1_0.woff') format('woff'),url('./3A2D04_1_0.ttf') format('truetype');}
- 
-  
+
+
+@font-face {font-family: 'Tournedos'; font-weight: 400; font-style: italic; src: url('./3A2D04_1_0.eot');src: url('./3A2D04_1_0.eot?#iefix') format('embedded-opentype'),url('./3A2D04_1_0.woff2') format('woff2'),url('./3A2D04_1_0.woff') format('woff'),url('./3A2D04_1_0.ttf') format('truetype');}
+
+
 @font-face {font-family: 'Tournedos';font-weight: 700; src: url('./3A2D04_2_0.eot');src: url('./3A2D04_2_0.eot?#iefix') format('embedded-opentype'),url('./3A2D04_2_0.woff2') format('woff2'),url('./3A2D04_2_0.woff') format('woff'),url('./3A2D04_2_0.ttf') format('truetype');}
- 
-  
+
+
 @font-face {font-family: 'Tournedos'; font-style: italic; font-weight: 700; src: url('./3A2D04_3_0.eot');src: url('./3A2D04_3_0.eot?#iefix') format('embedded-opentype'),url('./3A2D04_3_0.woff2') format('woff2'),url('./3A2D04_3_0.woff') format('woff'),url('./3A2D04_3_0.ttf') format('truetype');}
- 
