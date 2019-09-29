@@ -11,7 +11,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "node ./scripts/deploy.js"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -32,6 +33,11 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "ssh2": "^0.8.5"
+  },
+  "deployment": {
+    "staging": "/var/www/html",
+    "production": "sftp://bryanmelliott@fordi.org/home/bryanmelliott/www/fordi.org/"
   }
 }
