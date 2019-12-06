@@ -4,13 +4,15 @@ import Portfolio from './Portfolio';
 import TwoPiece from './TwoPiece';
 import About from './About';
 import Nav from './Nav';
+import GitTag from './GitTag';
 
 export default () => (
   <Layout>
-    <TwoPiece 
+    <TwoPiece
       top={Portfolio}
       nav={Nav}
       bottom={About}
     />
+    <GitTag href="https://github.com/fordi/fordi-org"/>
   </Layout>
 );

@@ -1,0 +1,46 @@
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+img.backPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+img.pageCurl {
+  width: 32px;
+  height: 32px;
+  transition: width, height, 0.4s;
+  position: relative;
+  z-index: 3;
+}
+.container:hover img.pageCurl {
+  width: 256px;
+  height: 256px;
+}
+.link--window {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 142%;
+  height: 71%;
+  transform: translate(33%, 126%) rotate(45deg) translate(-50%, -100%);
+  overflow: hidden;
+}
+
+.container:hover .link--inner {
+  transform: translate(0%, 0%) rotate(-45deg) translate(-1.5%, 30%);
+}
+
+.link--inner {
+  transform: translate(0%, 0%) rotate(-45deg) translate(-45%, -14.5%);
+  width: 256px;
+  height: 256px;
+  transition: transform, 0.4s;
+}

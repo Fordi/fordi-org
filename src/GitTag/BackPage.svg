@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient y2="567" x2="133" y1="552.7" x1="146.8" id="drop_shadow" gradientTransform="matrix(-3.63 0 0 -3.77 867 2682)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#666666ff" offset="0"/>
+      <stop stop-color="#ffffffff" offset="1"/>
+    </linearGradient>
+  </defs>
+  <path d="M567 834V340H91c62 42 457 455 476 494z" fill="url(#drop_shadow)" transform="matrix(.538 0 0 .518 -49 -176)"/>
+</svg>
