@@ -180,7 +180,7 @@ const sshCopy = async (src, tgt) => {
   const dirs = entries.filter(file => file.isDirectory());
   const ssh = new PClient();
 
-  const home = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
+  const home = process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'];
   let privateKey;
   if (exists(join(home, '.ssh/id_rsa'))) {
     privateKey = readFileSync(join(home, '.ssh/id_rsa'), { encoding: 'utf-8' });

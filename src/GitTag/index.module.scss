@@ -15,7 +15,7 @@ img.backPage {
 img.pageCurl {
   width: 32px;
   height: 32px;
-  transition: width, height, 0.4s;
+  transition: width 0.4s, height 0.4s;
   position: relative;
   z-index: 3;
 }
@@ -35,12 +35,12 @@ img.pageCurl {
 }
 
 .container:hover .link--inner {
-  transform: translate(0%, 0%) rotate(-45deg) translate(-1.5%, 30%);
+  transform: translate(0) rotate(-45deg) translate(-0.25%,30%);
 }
 
 .link--inner {
-  transform: translate(0%, 0%) rotate(-45deg) translate(-45%, -14.5%);
+  transition: transform 0.4s;
+  transform: translate(0%, 0%) rotate(-45deg) translate(-44%, -14.5%);
   width: 256px;
   height: 256px;
-  transition: transform, 0.4s;
 }
