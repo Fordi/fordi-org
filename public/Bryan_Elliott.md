@@ -38,6 +38,10 @@ Languages
 * ANTLR
 * PEG
 * Groovy
+* Ruby
+* SASS
+* SCSS
+* ECMAScript 6
 
 ### Hobby - languages in which I done signifcant personal work
 
@@ -45,15 +49,12 @@ Languages
 * C++
 * C
 * Arduino
-* ECMAScript 6
 * TypeScript
-* SASS
-* SCSS
 * Lua
 * Waxeye
 * Python
 * Go
-* Ruby
+* Haxe
 
 Version control systems
 =======================
