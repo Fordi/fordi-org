@@ -4,6 +4,7 @@ BRYAN ELLIOTT
 ## UX Architect
 
 Email: ook@codemonkeybryan.com
+
 Phone: +1-267-475-7721
 
 * Web and Java development, user experience design, project architecture
