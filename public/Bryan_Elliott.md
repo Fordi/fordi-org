@@ -139,5 +139,5 @@ Wharton Alumni Affairs - 01/2006 to 05/2006
 
 ### Web developer (Project)
 
-* Reallocated from my job as Administratve Assistant to build the Wharton Alumni Afairs website
+* Reallocated from my job as Administratve Assistant to build the Wharton Alumni Affairs website
 * Leaned HTML 4.01 and CSS, as well as basic JavaScript, ColdFusion, and other early web technologies
