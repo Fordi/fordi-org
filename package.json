@@ -9,9 +9,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "build": "npm run build:resume; npm run build:app",
+    "build:app": "react-scripts build",
+    "build:resume": "pandoc public/Bryan_Elliott.md -o public/Bryan_Elliott.docx",
     "deploy": "node ./scripts/deploy.js"
   },
   "eslintConfig": {

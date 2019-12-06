@@ -67,7 +67,20 @@ Version control systems
 SPECIFIC EXPERIENCE
 -------------------
 
-Orbis Technologies, Inc. - 09/2011 to Present
+
+Orbis Technologies, Inc. - 11/2017 to Present
+=============================================
+
+### UI Developer
+
+* Responsible for maintaining existing Angular 1.x MyAccount application
+* Disassembled MyAccount into micro-apps, porting functionality from 
+    Angular 1.x to React / Redux
+* Implemented OAuth2 client SSO for various user flows
+* Implemented client-side payment encryption
+* Implemented build/deploy logic atop existing gulp and CRA2 scripts
+
+Orbis Technologies, Inc. - 09/2011 to 11/2017
 =============================================
 
 ### UX Architect
