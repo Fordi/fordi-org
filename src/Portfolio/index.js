@@ -22,8 +22,8 @@ export default () => (
       >
         Bryan helped to maintain Comcast's various customer portals, working in React and 
         Angular, and picking up Ruby and Rails.  The job was to prevent downtime, ensure
-        the security of transactions and personal information, and to create the best 
-        possible customer experience by working together with several upstream API teams 
+        the security of transactions and personal information, and to create the best
+        possible customer experience by working together with several upstream API teams
         to implement new features.
       </Item>
       <Item

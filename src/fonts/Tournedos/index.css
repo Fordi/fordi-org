@@ -27,10 +27,12 @@
  *
  * © 2019 MyFonts Inc
 */
-
-
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/3a2d04");
-
-
-@font-face {font-family: 'Tournedos';font-weight: 700; src: url('./3A2D04_2_0.eot');src: url('./3A2D04_2_0.eot?#iefix') format('embedded-opentype'),url('./3A2D04_2_0.woff2') format('woff2'),url('./3A2D04_2_0.woff') format('woff'),url('./3A2D04_2_0.ttf') format('truetype');}
+@font-face {
+    font-family: 'Tournedos';
+    font-weight: 700;
+    src: url('./3A2D04_2_0.eot');
+    src: url('./3A2D04_2_0.eot?#iefix') format('embedded-opentype'),
+         url('./3A2D04_2_0.woff2') format('woff2'),
+         url('./3A2D04_2_0.woff') format('woff'),
+         url('./3A2D04_2_0.ttf') format('truetype');
+}
