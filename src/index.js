@@ -1,7 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import './index.scss';
-import './globals.js';
-import App from './App';
+import './favicon.ico';
+import './logo192.png';
+import './logo512.png';
+import './manifest.json';
+import Root from '_/Root';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(<Root />, document.getElementById('root'));

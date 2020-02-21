@@ -1,10 +1,10 @@
 import React from 'react';
-import Layout from './Layout';
-import Portfolio from './Portfolio';
-import TwoPiece from './TwoPiece';
-import About from './About';
-import Nav from './Nav';
-import GitTag from './GitTag';
+import Layout from '_/Layout';
+import Portfolio from '_/Portfolio';
+import TwoPiece from '_/TwoPiece';
+import About from '_/About';
+import Nav from '_/Nav';
+import GitTag from '_/GitTag';
 
 export default () => (
   <Layout>

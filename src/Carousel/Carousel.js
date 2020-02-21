@@ -1,7 +1,7 @@
 import React, { Children, cloneElement, useState } from 'react';
-import { joinClass } from '../globals';
+import { joinClass } from '_/globals';
 
-import { 
+import {
   container,
   carousel,
   earlier,
