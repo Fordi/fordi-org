@@ -2,7 +2,7 @@ import React from 'react';
 import ExtLink from '../ExtLink';
 import fordi from './fordi.png';
 import styles from './index.module.scss';
-import { joinClass } from '_/globals';
+import { joinClass } from '_/helpers';
 import docx from './Bryan_Elliott.docx';
 import md from './Bryan_Elliott.md';
 

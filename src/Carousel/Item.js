@@ -1,6 +1,6 @@
 import React from 'react';
 import ExtLink from '_/ExtLink';
-import { joinClass } from '_/globals';
+import { joinClass } from '_/helpers';
 import styles from './index.module.scss';
 
 export default ({

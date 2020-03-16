@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './index.module.scss';
-import { joinClass } from '../globals';
+import { joinClass } from '_/helpers';
 
 export default ({ className, top: Top, bottom: Bottom, nav: Nav }) => {
   const [selected, setSelected] = useState('top');

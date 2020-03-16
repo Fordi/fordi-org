@@ -1,5 +1,5 @@
 import React, { Children, cloneElement, useState } from 'react';
-import { joinClass } from '_/globals';
+import { joinClass } from '_/helpers';
 
 import {
   container,

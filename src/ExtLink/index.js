@@ -1,5 +1,5 @@
 import React from 'react';
-import { joinClass } from '_/globals';
+import { joinClass } from '_/helpers';
 
 export default ({ children, className, ...props }) => (
   <a
