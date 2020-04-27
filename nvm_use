@@ -3,10 +3,6 @@ NODE_VER="$(cat .nvmrc)"
 if [[ -f "${HOME}/.nvm/nvm.sh" ]]; then
   # Normal *nix
   source "${HOME}/.nvm/nvm.sh"
-  nvm install "$NODE_VER"
-  nvm use "$NODE_VER"
-else
-  # Assuming nvm-windows in git-bash
-  nvm install "$(cat .nvmrc)"
-  nvm use "$(cat .nvmrc)"
 fi
+nvm install "$NODE_VER"
+nvm use "$NODE_VER"
