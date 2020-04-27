@@ -7,5 +7,6 @@ if [[ -f "${HOME}/.nvm/nvm.sh" ]]; then
   nvm use "$NODE_VER"
 else
   # Assuming nvm-windows in git-bash
+  nvm install "$(cat .nvmrc)"
   nvm use "$(cat .nvmrc)"
 fi
