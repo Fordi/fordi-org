@@ -23,9 +23,9 @@ export default ({
 }) => html`
   <li className=${joinClass(styles.item, className)} id=${id}>
     <div className=${styles.shadow}> </div>
-    <ExtLink href=${href}>
+    <${ExtLink} href=${href}>
       <img src=${image} className=${styles.image} alt=${title} />
-    </ExtLink>
+    <//>
     <div className=${styles.flavor}>${children}</div>
   </li>
 `;
