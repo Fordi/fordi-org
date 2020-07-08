@@ -6,12 +6,13 @@
   "scripts": {
     "dist": "./dist.sh",
     "start": "http-server src",
-    "start:dist": "npm run dist; http-server dist -g"
+    "start:dist": "http-server dist -g"
   },
   "author": "Bryan Elliott <fordiman@gmail.com> (https://fordi.org)",
   "license": "ISC",
   "devDependencies": {
     "buildless": "0.0.10",
+    "http-server": "^0.12.3",
     "microbundle": "^0.12.2"
   }
 }
