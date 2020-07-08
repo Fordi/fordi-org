@@ -3,52 +3,52 @@ import ExtLink from './ExtLink.js';
 
 const styles = css`
   .nav {
-      display: flex;
-      height: 96px;
-      overflow: hidden;
-      z-index: 1;
+    display: flex;
+    height: 96px;
+    overflow: hidden;
+    z-index: 1;
   }
   .logo {
-      background: #99e8ff;
+    background: #99e8ff;
   }
   .callout, .logo {
-      vertical-align: bottom;
-      flex: 0 0 auto;
+    vertical-align: bottom;
+    flex: 0 0 auto;
   }
   .controls {
-      flex: 1 1 auto;
-      background: #99e8ff;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-around;
+    flex: 1 1 auto;
+    background: #99e8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
   }
   .callout {
-      position: relative;
-      transition: top 0.4s;
+    position: relative;
+    transition: top 0.4s;
   }
   .nav-top {
-      margin-top: -96px;
-      margin-bottom: 0;
-      .callout {
-          top: 0;
-      }
-
+    margin-top: -96px;
+    margin-bottom: 0;
   }
+  .nav-top .callout {
+    top: 0;
+  }
+
   .nav-bottom {
-      margin-top: 0;
-      margin-bottom: -96px;
-      .callout {
-          top: -45px;
-      }
+    margin-top: 0;
+    margin-bottom: -96px;
+  }
+  .nav-bottom .callout {
+    top: -45px;
   }
   .active {
-      text-shadow: 0 0 1px #FFFFFF, 0 0 1px #FFFFFF;
-      color: black;
+    text-shadow: 0 0 1px #FFFFFF, 0 0 1px #FFFFFF;
+    color: black;
   }
   .resume {}
   .button:focus {
-      outline: none;
+    outline: none;
   }
 `;
 
