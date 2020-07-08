@@ -17,11 +17,13 @@ export const css = (...args) => {
 
 const head = document.querySelector('head');
 const sheets = head.appendChild(document.createElement('style')).sheet;
-const allRules = a => a.selectorText
-  ? [a]
-  : Array.from(a.cssRules || []).reduce((list, rule) => (
-    [...list, ...allRules(rule)]
-  ), []);
+const allRules = a => (
+  a.selectorText
+    ? [a]
+    : Array.from(a.cssRules || []).reduce((list, rule) => (
+      [...list, ...allRules(rule)]
+    ), [])
+);
 
 const parseRules = css => {
   const t = document.createElement('style');
