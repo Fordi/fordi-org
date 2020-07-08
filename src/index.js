@@ -1,10 +1,19 @@
-import React from 'react';
-import { render } from 'react-dom';
-import './index.scss';
-import './favicon.ico';
-import './logo192.png';
-import './logo512.png';
-import './manifest.json';
-import Root from '_/Root';
+import { render, html } from './buildless.js';
 
-render(<Root />, document.getElementById('root'));
+import Layout from './Layout.js';
+import About from './About.js';
+import TwoPiece from './TwoPiece.js';
+import Nav from './Nav.js';
+import Portfolio from './Portfolio/index.js';
+
+const Index = () => html`
+  <${Layout}>
+    <${TwoPiece}
+      top=${Portfolio}
+      nav=${Nav}
+      bottom=${About}
+    />
+  <//>
+`;
+
+render(html`<${Index}/>`, document.body);

@@ -1,4 +1,4 @@
-@import 'fonts/Tournedos/index.css';
+@import 'Tournedos/index.css';
 
 html, body {
 	font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
@@ -33,10 +33,9 @@ h1 {
 	text-decoration: none;
 
 	color: #0272B6;
-
-	&:hover, &:active {
-		background-color: transparent;
-		border-color: transparent;
-		color: #015383;
-	}
+}
+.button--text:hover, .button--text:active {
+	background-color: transparent;
+	border-color: transparent;
+	color: #015383;
 }
