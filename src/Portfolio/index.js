@@ -2,6 +2,7 @@ import { html, css } from '../buildless.js';
 import Carousel from '../Carousel/index.js';
 import Item from '../Carousel/Item.js';
 import XfinityLogo from './XfinityLogo.js';
+import ExtLink from '../ExtLink.js';
 
 const styles = css`
   .portfolio {
@@ -16,11 +17,27 @@ const styles = css`
   .carousel h1 {
     max-height: 42px;
   }
+  .flavorLink {
+    text-shadow: 1px 1px 10px black, -1px -1px 10px black;
+    color: white;
+    text-decoration: none;
+  }
 `;
 
 export default () => html`
   <div className=${styles.portfolio}>
     <${Carousel} className=${styles.carousel}>
+      <${Item}
+        href="https://github.com/Fordi/fordi-org/tree/buildless"
+        image="Portfolio/portfolio.jpg"
+        title="You Are Here"
+      >
+        Bryan enjoys playing with innovative ways of building things, usually starting
+        with this page.  Visit the repo to see how he wrote this one using
+        ${' '}
+        <${ExtLink} className=${styles.flavorLink} href="https://github.com/Fordi/buildless">buildless<//>
+        ${'.'}
+      <//>
       <${Item}
         href="https://customer.xfinity.com"
         image="Portfolio/xfinity.png"
