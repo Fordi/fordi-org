@@ -6,7 +6,8 @@
   "scripts": {
     "dist": "webpack",
     "start": "http-server src",
-    "start:dist": "http-server dist -g"
+    "start:dist": "http-server dist -g",
+    "clean": "rm -rf dist"
   },
   "author": "Bryan Elliott <fordiman@gmail.com> (https://fordi.org)",
   "license": "ISC",

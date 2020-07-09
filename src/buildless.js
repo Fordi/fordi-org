@@ -1,4 +1,4 @@
-export * from 'https://unpkg.com/@fordi-org/buildless@1.0.3/dist/buildless.modern.js';
+export * from 'https://unpkg.com/@fordi-org/buildless';
 
 export const joinClass = (...classes) => classes.filter(a => !!a).join(' ');
 

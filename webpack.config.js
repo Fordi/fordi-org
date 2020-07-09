@@ -7,11 +7,6 @@ module.exports = {
     filename: 'index.js',
     path: resolve(__dirname, 'dist'),
   },
-  resolve: {
-    alias: {
-      'https://unpkg.com/@fordi-org/buildless@1.0.3/dist/buildless.modern.js': '@fordi-org/buildless/dist/buildless.prod.modern.js',
-    }
-  },
   mode: 'production',
   module: {
     rules: [
@@ -26,12 +21,20 @@ module.exports = {
                 pragma: 'h',
                 tag: 'html',
                 import: {
-                  module: 'https://unpkg.com/@fordi-org/buildless@1.0.3/dist/buildless.modern.js',
+                  module: 'https://unpkg.com/@fordi-org/buildless',
                   export: 'h'
                 },
                 useNativeSpread: true
               }],
-              ['./babel-plugin-css/index.js'],
+              ['./babel/babel-plugin-css.js'],
+              ['./babel/babel-plugin-ununpkg.js', {
+                pathMap: {
+                  '@fordi-org/buildless': {
+                    // Map to the prod version
+                    '': 'dist/buildless.prod.modern.js'
+                  }
+                }
+              }],
               ['babel-plugin-minify-constant-folding'],
               ['babel-plugin-minify-dead-code-elimination'],
               ['babel-plugin-minify-flip-comparisons'],
