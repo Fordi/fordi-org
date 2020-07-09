@@ -1,97 +1,70 @@
-
 const { resolve } = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const TerserPlugin = require('terser-webpack-plugin');
-
-const styleLoader = (test, modules, sass) => ({
-  test,
-  use: [
-    MiniCssExtractPlugin.loader,
-    modules ? {
-      loader: 'css-loader',
-      options: { importLoaders: 1, modules: true }
-    } : 'css-loader',
-    ...(sass ? ['sass-loader'] : []),
-  ],
-});
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: resolve(__dirname, 'src/index.js'),
-  devtool: 'source-map',
+  entry: './src/index.js',
+  output: {
+    filename: 'index.js',
+    path: resolve(__dirname, 'dist'),
+  },
+  mode: 'production',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: { loader: 'babel-loader' },
-      },
-      {
-        test: /\.html$/,
-        use: [{ loader: 'html-loader' }],
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif|ico|eot|ttf|woff2?|docx?|md|svg)$/,
-        exclude: '/node_modules/',
-        use: [ 'file-loader?name=[name].[ext]' ],
-      },
-      {
-        oneOf: [
-          styleLoader(/\.module\.s[ac]ss/i, true, true),
-          styleLoader(/\.module\.css$/i, true, false),
-          styleLoader(/\.s[ac]ss/i, false, true),
-          styleLoader(/\.css$/i, false, false),
-        ],
-      },
-    ],
-  },
-  resolve: {
-    alias: {
-      _: resolve(__dirname, 'src/'),
-    },
-  },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebPackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
-      xhtml: true,
-    }),
-    new MiniCssExtractPlugin({filename: "[name].css"}),
-
-  ],
-  optimization: {
-    concatenateModules: true,
-    minimize: true,
-    minimizer: [
-    new TerserPlugin({
-      cache: true,
-      parallel: true,
-      sourceMap: true,
-      terserOptions: {
-        mangle: true,
-        ie8: false,
-        safari10: false,
-        ecma: 2015,
-        toplevel: true,
-        parse: {},
-        compress: {
-          passes: 3,
-          unsafe_methods: true,
-        },
-        output: {
-          ecma: 2015,
-          webkit: false,
-          semicolons: false,
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            plugins: [
+              ['babel-plugin-htm', {
+                pragma: 'h',
+                tag: 'html',
+                import: {
+                  module: 'https://unpkg.com/@fordi-org/buildless',
+                  export: 'h'
+                },
+                useNativeSpread: true
+              }],
+              ['./babel/babel-plugin-css.js'],
+              ['./babel/babel-plugin-ununpkg.js', {
+                pathMap: {
+                  '@fordi-org/buildless': {
+                    // Map to the prod version
+                    '': 'dist/buildless.prod.modern.js'
+                  }
+                }
+              }],
+              ['babel-plugin-minify-constant-folding'],
+              ['babel-plugin-minify-dead-code-elimination'],
+              ['babel-plugin-minify-flip-comparisons'],
+              ['babel-plugin-minify-guarded-expressions'],
+              ['babel-plugin-minify-infinity'],
+              ['babel-plugin-minify-mangle-names'],
+              ['babel-plugin-minify-replace'],
+              ['babel-plugin-minify-simplify'],
+              ['babel-plugin-minify-type-constructors'],
+              ['babel-plugin-transform-member-expression-literals'],
+              ['babel-plugin-transform-merge-sibling-variables'],
+              ['babel-plugin-transform-minify-booleans'],
+              ['babel-plugin-transform-property-literals'],
+              ['babel-plugin-transform-simplify-comparison-operators'],
+              ['babel-plugin-transform-undefined-to-void']
+            ]
+          }
         }
       }
-    }),
-  ],
+    ]
   },
-  output: {
-    path: resolve(__dirname, 'dist/'),
-    filename: '[name].js',
-  },
+  plugins: [
+    new CopyPlugin({
+      patterns: [{
+        from: 'src',
+        to: '.',
+        globOptions: {
+          ignore: ['**/*.js']
+        }
+      }]
+    })
+  ]
 };

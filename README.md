@@ -10,10 +10,25 @@ Please have [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) install
 
 Please have [nvm-windows](https://github.com/coreybutler/nvm-windows/releases) and [git-bash](https://git-scm.com/download/win) installed.
 
-### Running locally
+### Before first run
 
 ```bash
 $ ./nvm_use
 $ npm i
+```
+
+### Running locally
+
+```bash
 $ npm run start
+```
+
+### Building a production build
+```bash
+$ npm run dist
+```
+
+### Running a production build
+```bash
+$ npm run start:dist
 ```

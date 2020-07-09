@@ -1,16 +1,31 @@
-import React from 'react';
-import ExtLink from '_/ExtLink';
-import { joinClass } from '_/helpers';
-import styles from './index.module.scss';
+import { html, css, joinClass } from '../buildless.js';
+import ExtLink from '../ExtLink.js';
 
+const styles = css`
+  .item {
+    width: 50vw;
+    max-width: 640px;
+    transition: opacity 0.4s, transform 0.4s;
+    position: absolute;
+  }
+  .item img {
+    box-shadow: 0 0 10px 0 #eeaa44;
+    width: 50vw;
+    max-width: 640px;
+  }
+  .item .flavor {
+    color: white;
+    text-shadow: 0 0 10px #46585c, 0 0 10px #46585c, 0 0 10px #46585c;
+  }
+`;
 export default ({
   id, href, image, title, children, className
-}) => (
-  <li className={joinClass(styles.item, className)} id={id}>
-    <div className={styles.shadow}>&nbsp;</div>
-    <ExtLink href={href}>
-      <img src={image} className={styles.image} alt={title} />
-    </ExtLink>
-    <div className={styles.flavor}>{children}</div>
+}) => html`
+  <li className=${joinClass(styles.item, className)} id=${id}>
+    <div className=${styles.shadow}> </div>
+    <${ExtLink} href=${href}>
+      <img src=${image} className=${styles.image} alt=${title} />
+    <//>
+    <div className=${styles.flavor}>${children}</div>
   </li>
-);
+`;
