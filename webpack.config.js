@@ -59,7 +59,7 @@ module.exports = {
         from: 'src',
         to: '.',
         globOptions: {
-          ignore: ['** /*.js']
+          ignore: ['**/*.js']
         }
       }]
     })
