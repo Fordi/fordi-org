@@ -1,4 +1,4 @@
-import { html } from '../buildless.js';
+import { html } from 'https://unpkg.com/@fordi-org/buildless';
 export default (props) => html`
   <svg xmlns="http://www.w3.org/2000/svg" width="226" height="77" ...${props}>
     <defs>

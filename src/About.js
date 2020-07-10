@@ -1,4 +1,4 @@
-import { html, css } from './buildless.js';
+import { html, css } from 'https://unpkg.com/@fordi-org/buildless';
 
 const styles = css`
   .about {

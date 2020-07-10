@@ -1,12 +1,7 @@
-import { html, css, joinClass } from './buildless.js';
+import { html, css } from 'https://unpkg.com/@fordi-org/buildless';
 
-const styles = css`
-  .extLink {}
-`;
-
-export default ({ children, className, ...props }) => html`
+export default ({ children, ...props }) => html`
   <a
-    className=${joinClass(styles['extLink'], className)}
     target="_blank"
     rel="noopener noreferrer"
     ...${props}

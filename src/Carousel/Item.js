@@ -1,4 +1,4 @@
-import { html, css, joinClass } from '../buildless.js';
+import { html, css } from 'https://unpkg.com/@fordi-org/buildless';
 import ExtLink from '../ExtLink.js';
 
 const styles = css`
@@ -21,7 +21,7 @@ const styles = css`
 export default ({
   id, href, image, title, children, className
 }) => html`
-  <li className=${joinClass(styles.item, className)} id=${id}>
+  <li className=${styles.item.and(className)} id=${id}>
     <div className=${styles.shadow}> </div>
     <${ExtLink} href=${href}>
       <img src=${image} className=${styles.image} alt=${title} />

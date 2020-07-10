@@ -1,4 +1,4 @@
-import { html, css, useState, joinClass, cloneElement } from '../buildless.js';
+import { html, css, useState, cloneElement, classes } from 'https://unpkg.com/@fordi-org/buildless';
 
 const {
   container,
@@ -94,18 +94,18 @@ export default ({ children, className, listClass }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const prevItem = () => setActiveIndex(((activeIndex - 1) + children.length) % children.length);
   const nextItem = () => setActiveIndex((activeIndex + 1) % children.length);
-  const classes = [earlier, previous, activeItem, next, later];
+  const states = [earlier, previous, activeItem, next, later];
   const childrenWithProps = children.map((child, index) => {
     const classIndex = (index - activeIndex + 2 + children.length) % children.length;
-    return cloneElement(child, { className: joinClass(child.props.className, classes[classIndex] || hidden) });
+    return cloneElement(child, { className: classes(child.props.className, states[classIndex] || hidden) });
   });
   const { title } = childrenWithProps[activeIndex].props;
   return html`
-    <div className=${joinClass(container, className)}>
-      <button type="button" onClick=${prevItem} className=${joinClass(control, prevBtn)}>Previous</button>
-      <button type="button" onClick=${nextItem} className=${joinClass(control, nextBtn)}>Next</button>
+    <div className=${container.and(className)}>
+      <button type="button" onClick=${prevItem} className=${control.and(prevBtn)}>Previous</button>
+      <button type="button" onClick=${nextItem} className=${control.and(nextBtn)}>Next</button>
       <h1>${title}</h1>
-      <ul className=${joinClass(carousel, listClass)}>
+      <ul className=${carousel.and(listClass)}>
         ${childrenWithProps}
       </ul>
     </div>

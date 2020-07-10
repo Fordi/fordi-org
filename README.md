@@ -20,15 +20,15 @@ $ npm i
 ### Running locally
 
 ```bash
-$ npm run start
+$ npm run src
 ```
 
 ### Building a production build
 ```bash
-$ npm run dist
+$ npm run build
 ```
 
 ### Running a production build
 ```bash
-$ npm run start:dist
+$ npm run dist
 ```

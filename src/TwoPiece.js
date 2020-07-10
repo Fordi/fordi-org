@@ -1,4 +1,4 @@
-import { html, useState, joinClass, css } from './buildless.js';
+import { html, useState, css } from 'https://unpkg.com/@fordi-org/buildless';
 
 const styles = css`
   .twoPiece {
@@ -29,7 +29,7 @@ export default ({ className, top: Top, bottom: Bottom, nav: Nav }) => {
   const setToTop = () => setSelected('top');
   const setToBottom = () => setSelected('bottom');
   return html`
-    <div className=${joinClass(styles.twoPiece, className, styles[`${selected}-selected`])}>
+    <div className=${styles.twoPiece.and(className, styles[`${selected}-selected`])}>
       <div className=${styles.top}>
         <${Top} selected=${selected === 'top'} />
       </div>

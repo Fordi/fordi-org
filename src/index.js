@@ -1,4 +1,4 @@
-import { render, html } from './buildless.js';
+import { render, html } from 'https://unpkg.com/@fordi-org/buildless';
 
 import Layout from './Layout.js';
 import About from './About.js';
