@@ -28,7 +28,7 @@ export default () => html`
   <div className=${styles.portfolio}>
     <${Carousel} className=${styles.carousel}>
       <${Item}
-        href="https://github.com/Fordi/fordi-org/tree/buildless"
+        href="https://github.com/Fordi/fordi-org"
         image="Portfolio/portfolio.jpg"
         title="You Are Here"
       >
