@@ -33,7 +33,6 @@
     "babel-plugin-transform-property-literals": "^6.9.4",
     "babel-plugin-transform-simplify-comparison-operators": "^6.9.4",
     "babel-plugin-transform-undefined-to-void": "^6.9.4",
-    "buildless": "0.0.10",
     "clean-css": "^4.2.3",
     "copy-webpack-plugin": "^6.0.3",
     "http-server": "^0.12.3",
