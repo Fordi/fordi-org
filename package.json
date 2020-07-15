@@ -4,14 +4,14 @@
   "description": "Buildless version of my portfolio site",
   "browser": "dist/index.html",
   "scripts": {
-    "build": "webpack",
-    "src": "http-server src",
-    "dist": "http-server dist -g",
+    "build": "buildless-build",
+    "src": "buildless-serve src",
+    "dist": "buildless-serve prod",
     "clean": "rm -rf dist"
   },
   "author": "Bryan Elliott <fordiman@gmail.com> (https://fordi.org)",
   "license": "ISC",
   "devDependencies": {
-    "@fordi-org/buildless": "^1.0.8"
+    "@fordi-org/buildless": "^1.0.11"
   }
 }
