@@ -1,18 +1,19 @@
-import { render, html } from 'https://unpkg.com/@fordi-org/buildless';
+import { render, html, Router, asyncComponent } from 'https://unpkg.com/@fordi-org/buildless';
 
+import Redirect from './Redirect.js';
 import Layout from './Layout.js';
-import About from './About.js';
-import TwoPiece from './TwoPiece.js';
-import Nav from './Nav.js';
-import Portfolio from './Portfolio/index.js';
+import Loading from './Loading.js';
+
+const About = asyncComponent(() => import('./About.js'), Loading);
+const Portfolio = asyncComponent(() => import('./Portfolio/index.js'), Loading);
 
 const Index = () => html`
   <${Layout}>
-    <${TwoPiece}
-      top=${Portfolio}
-      nav=${Nav}
-      bottom=${About}
-    />
+    <${Router}>
+      <${Portfolio} path="/portfolio" />
+      <${About} path="/about" />
+      <${Redirect} path="/" to="/portfolio" />
+    <//>
   <//>
 `;
 

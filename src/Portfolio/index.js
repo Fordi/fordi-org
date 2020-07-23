@@ -54,7 +54,7 @@ export default () => html`
         image="Portfolio/rsuite.png"
         title=${html`<img src="Portfolio/RSuiteLogo.png" style=${{ marginTop: -22 }} alt="RSuite CMS" />`}
       >
-        Bryan developed the user interface for RSI Content Solutions&rsquo; main
+        Bryan developed the user interface for RSI Content Solutions’ main
         product, RSuite, from scratch.  Leveraging Ember, LESS, and building REST
         services in Java, he focused on functionality, extensibility, and
         performance.  The single-page web application is used by publishing houses
@@ -65,7 +65,7 @@ export default () => html`
         image="Portfolio/toysrus.jpg"
         title=${html`<img src="Portfolio/toysrusLogo.png" style=${{ marginTop: -15 }} alt={'Toys"R"Us'} />`}
       >
-        Bryan&rsquo;s role as part of the Toys&lsquo;R&rsquo;Us conversion team was that of
+        Bryan’s role as part of the Toys‘R’Us conversion team was that of
         converting Prototype-dependent scripts to jQuery, converting an
         include-based JSP website into one that leverages Tiles, and ensuring W3C
         validation throughout the site.
@@ -75,7 +75,7 @@ export default () => html`
         image="Portfolio/maurices.jpg"
         title="Maurices"
       >
-        Maurices needed a dynamic Store Locator that could be integrated with Google Maps&rsquo; API;
+        Maurices needed a dynamic Store Locator that could be integrated with Google Maps’ API;
         <br />
         <em>Bryan was happy to oblige.</em>
       <//>
@@ -84,7 +84,7 @@ export default () => html`
         image="Portfolio/sportchek.jpg"
         title="Forzani Sport Chek"
       >
-        Bryan set up fonts and flash, enabled CSS3, and played &ldquo;fixer&rdquo;
+        Bryan set up fonts and flash, enabled CSS3, and played “fixer”
         for this fast launch.
       <//>
       <${Item}
@@ -101,7 +101,7 @@ export default () => html`
         title="Vectrix Tools"
       >
         Whether calculating your gasoline savings with a Vectrix scooter versus other
-        vehicles, or determining how far you can go on a full charge, Bryan&apos;s code
+        vehicles, or determining how far you can go on a full charge, Bryan's code
         ${' '}
         <em>enables</em>
         ${' '}

@@ -12,6 +12,6 @@
   "author": "Bryan Elliott <fordiman@gmail.com> (https://fordi.org)",
   "license": "ISC",
   "devDependencies": {
-    "@fordi-org/buildless": "^1.0.11"
+    "@fordi-org/buildless": "^1.1.7"
   }
 }
