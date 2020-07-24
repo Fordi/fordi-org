@@ -13,6 +13,7 @@ const Index = () => html`
       <${Portfolio} path="/portfolio" />
       <${About} path="/about" />
       <${Redirect} path="/" to="/portfolio" />
+      <${Loading} path="/loading" />
     <//>
   <//>
 `;
