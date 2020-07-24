@@ -1,4 +1,4 @@
-import { render, html, Router, asyncComponent } from 'https://unpkg.com/@fordi-org/buildless';
+import { render, html, css, Router, asyncComponent } from 'https://unpkg.com/@fordi-org/buildless';
 
 import Redirect from './Redirect.js';
 import Layout from './Layout.js';
