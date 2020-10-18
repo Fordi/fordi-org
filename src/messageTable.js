@@ -8,7 +8,7 @@ export default {
                   wondering what a "Syntax" was.`]: {
     es: `La primera experiencia de Bryan con la programación fue en segundo grado. Papá tenía
                    acaba de comprar su primera computadora, y Bryan pasó meses estudiando
-                   el manual de sintaxis básica de GW, probando comandos, rompiendo cosas y
+                   el manual de sintaxis GW Basic, probando comandos, rompiendo cosas y
                    preguntándose qué era una "Sintaxis".`
   },
   [`Through middle and high schools, Bryan taught himself Turbo Pascal,
