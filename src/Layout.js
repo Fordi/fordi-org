@@ -11,11 +11,11 @@ const styles = css`
   }
 `;
 
-export default ({ children, className }) => {
+export default ({ children, className, setLanguage }) => {
   return html`
     <div className=${styles.container.and(className)}>
       ${children}
     </div>
-    <${Nav} />
+    <${Nav} setLanguage=${setLanguage}/>
   `;
 };

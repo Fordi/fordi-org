@@ -11,8 +11,20 @@ const styles = css`
     margin-top: -96px;
     position: relative;
   }
-  .logo {
+  .logo, .language {
     background: #99e8ff;
+  }
+  .language {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .language button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-right: 10px;
+    cursor: pointer;
   }
   .callout, .logo {
     vertical-align: bottom;
@@ -31,7 +43,7 @@ const styles = css`
     transition: top 0.4s;
     top: -45px;
   }
-  
+
   .active {
     text-shadow: 0 0 1px #FFFFFF, 0 0 1px #FFFFFF;
     color: black;
@@ -44,7 +56,7 @@ const styles = css`
 
 const textButton = styles.button.and('button--text');
 
-export default () => html`
+export default ({ setLanguage }) => html`
   <div className=${styles.nav}>
     <img className=${styles.logo} src="./fordi.png" alt="Personal logo" style=${{ height: 96 }} />
     <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 40 141" width="40" height="141" className=${styles.callout}>
@@ -63,6 +75,10 @@ export default () => html`
       <${Link} href="/about" className=${classes('button--text', location.pathname === '/about' && styles.active)}>
           About
       <//>
+    </div>
+    <div className=${styles.language}>
+      <button onClick=${() => setLanguage('en')}><img src="en.png" alt="English" /></button>
+      <button onClick=${() => setLanguage('es')}><img src="es.png" alt="Español" /></button>
     </div>
   </div>
 `;

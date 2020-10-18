@@ -1,5 +1,5 @@
 import { html, css, useState, cloneElement, classes } from 'https://unpkg.com/@fordi-org/buildless';
-
+import { useI18n } from '../I18n.js';
 const {
   container,
   carousel,
@@ -100,6 +100,7 @@ export default ({ children, className, listClass }) => {
     return cloneElement(child, { className: classes(child.props.className, states[classIndex] || hidden) });
   });
   const { title } = childrenWithProps[activeIndex].props;
+  const _ = useI18n();
   return html`
     <div className=${container.and(className)}>
       <button type="button" onClick=${prevItem} className=${control.and(prevBtn)}>Previous</button>
