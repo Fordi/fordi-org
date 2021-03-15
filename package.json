@@ -2,7 +2,7 @@
   "name": "fordi-org",
   "version": "1.0.0",
   "description": "Buildless version of my portfolio site",
-  "browser": "dist/index.html",
+  "browser": "src/index.html",
   "scripts": {
     "build": "buildless-build",
     "src": "buildless-serve src",
