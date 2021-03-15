@@ -17,6 +17,7 @@ const styles = css`
   }
   .carousel h1 {
     max-height: 42px;
+    margin-left: 1em;
   }
   .flavorLink {
     text-shadow: 1px 1px 10px black, -1px -1px 10px black;
