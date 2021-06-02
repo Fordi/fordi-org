@@ -1,4 +1,8 @@
-import { html, css, classes, Router } from 'https://unpkg.com/@fordi-org/buildless';
+import html from 'html';
+import classes from 'classes';
+import css from 'css';
+import { Router } from 'preact-router';
+
 import ExtLink from './ExtLink.js';
 const { Link } = Router;
 const styles = css`

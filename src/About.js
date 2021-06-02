@@ -1,4 +1,6 @@
-import { html, css } from 'https://unpkg.com/@fordi-org/buildless';
+import html from 'html';
+import css from 'css';
+
 import { useI18n } from './I18n.js';
 const styles = css`
   .about {
@@ -92,3 +94,5 @@ export default () => {
       </div>
   `;
 };
+
+export const Testing = () => '1, 2, 3';

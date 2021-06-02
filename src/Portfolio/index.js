@@ -1,9 +1,14 @@
-import { html, css } from 'https://unpkg.com/@fordi-org/buildless';
+import html from 'html';
+import css from 'css';
+import makeResolver from 'makeResolver';
+
 import Carousel from '../Carousel/index.js';
 import Item from '../Carousel/Item.js';
 import XfinityLogo from './XfinityLogo.js';
 import ExtLink from '../ExtLink.js';
 import { useI18n } from '../I18n.js';
+
+const resolver = makeResolver(import.meta.url);
 
 const styles = css`
   .portfolio {
@@ -33,7 +38,7 @@ export default () => {
       <${Carousel} className=${styles.carousel}>
         <${Item}
           href="https://github.com/Fordi/fordi-org"
-          image="Portfolio/portfolio.jpg"
+          image=${resolver('portfolio.jpg')}
           title="${_`You Are Here`}"
         >
           ${_`Bryan enjoys playing with innovative ways of building things, usually starting
@@ -43,7 +48,7 @@ export default () => {
         <//>
         <${Item}
           href="https://customer.xfinity.com"
-          image="Portfolio/xfinity.png"
+          image=${resolver('xfinity.png')}
           title=${html`<${XfinityLogo} style=${{ marginTop: -18 }} alt="Xfinity MyAccount"/>`}
         >
           ${_`Bryan helped to maintain Comcast's various customer portals, working in React and
@@ -54,8 +59,8 @@ export default () => {
         <//>
         <${Item}
           href="https://www.orbistechnologies.com/rsuite"
-          image="Portfolio/rsuite.png"
-          title=${html`<img src="Portfolio/RSuiteLogo.png" style=${{ marginTop: -22 }} alt="RSuite CMS" />`}
+          image=${resolver('rsuite.png')}
+          title=${html`<img src=${resolver('RSuiteLogo.png')} style=${{ marginTop: -22 }} alt="RSuite CMS" />`}
         >
           ${_`Bryan developed the user interface for RSI Content Solutions’ main
           product, RSuite, from scratch.  Leveraging Ember, LESS, and building REST
@@ -65,8 +70,8 @@ export default () => {
         <//>
         <${Item}
           href="https://toysrus.com"
-          image="Portfolio/toysrus.jpg"
-          title=${html`<img src="Portfolio/toysrusLogo.png" style=${{ marginTop: -15 }} alt={'Toys"R"Us'} />`}
+          image=${resolver('toysrus.jpg')}
+          title=${html`<img src=${resolver('toysrusLogo.png')} style=${{ marginTop: -15 }} alt=${'Toys"R"Us'} />`}
         >
           ${_`Bryan’s role as part of the Toys‘R’Us conversion team was that of
           converting Prototype-dependent scripts to jQuery, converting an
@@ -75,7 +80,7 @@ export default () => {
         <//>
         <${Item}
           href="https://www.maurices.com/"
-          image="Portfolio/maurices.jpg"
+          image=${resolver('maurices.jpg')}
           title="Maurices"
         >
           ${_`Maurices needed a dynamic Store Locator that could be integrated with Google Maps’ API;`}
@@ -84,7 +89,7 @@ export default () => {
         <//>
         <${Item}
           href="https://sportchek.ca"
-          image="Portfolio/sportchek.jpg"
+          image=${resolver('sportchek.jpg')}
           title="Forzani Sport Chek"
         >
           ${_`Bryan set up fonts and flash, enabled CSS3, and played “fixer”
@@ -92,7 +97,7 @@ export default () => {
         <//>
         <${Item}
           href="https://muppet.fandom.com/wiki/The_Muppet_Whatnot_Workshop"
-          image="Portfolio/fao.jpg"
+          image=${resolver('fao.jpg')}
           title="Muppet Whatnot Workshop"
         >
           ${_`Bryan developed the web interface for the Muppet Whatnot Workshop, allowing an
@@ -100,7 +105,7 @@ export default () => {
         <//>
         <${Item}
           href="https://en.wikipedia.org/wiki/Vectrix"
-          image="Portfolio/vectrix.jpg"
+          image=${resolver('vectrix.jpg')}
           title="Vectrix Tools"
         >
           ${_`Whether calculating your gasoline savings with a Vectrix scooter versus other
