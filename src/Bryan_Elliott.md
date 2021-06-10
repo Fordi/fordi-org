@@ -70,7 +70,7 @@ SPECIFIC EXPERIENCE
 -------------------
 
 
-Orbis Technologies, Inc. - 11/2017 to Present
+Comcast (via TekSystems) - 11/2017 to Present
 =============================================
 
 ### UI Developer
