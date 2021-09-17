@@ -1,5 +1,10 @@
-import { html, css, classes, Router } from 'https://unpkg.com/@fordi-org/buildless';
+import { Router } from 'preact-router';
+import html from 'html';
+import css from 'css';
+import classes from 'classes';
+
 import ExtLink from './ExtLink.js';
+
 const { Link } = Router;
 const styles = css`
   .nav {

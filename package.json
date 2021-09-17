@@ -1,17 +1,15 @@
 {
   "name": "fordi-org",
   "version": "1.0.0",
-  "description": "Buildless version of my portfolio site",
+  "description": "Zero-build version of my portfolio site",
   "browser": "src/index.html",
   "scripts": {
-    "build": "buildless-build",
-    "src": "buildless-serve src",
-    "dist": "buildless-serve prod",
-    "clean": "rm -rf dist"
+    "start": "node app.js"
   },
   "author": "Bryan Elliott <fordiman@gmail.com> (https://fordi.org)",
   "license": "ISC",
   "devDependencies": {
-    "@fordi-org/buildless": "^1.3.2"
+    "chokidar": "^3.5.2",
+    "express": "^4.17.1"
   }
 }

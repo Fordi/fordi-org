@@ -1,6 +1,0 @@
-{
-  "infiniteLoopProtection": false,
-  "hardReloadOnChange": true,
-  "view": "browser",
-  "template": "static"
-}

@@ -1,4 +1,6 @@
-import { html, css } from 'https://unpkg.com/@fordi-org/buildless';
+import html from 'html';
+import css from 'css';
+
 import Carousel from '../Carousel/index.js';
 import Item from '../Carousel/Item.js';
 import XfinityLogo from './XfinityLogo.js';

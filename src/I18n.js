@@ -1,4 +1,6 @@
-import { createI18nContext, useContext } from 'https://unpkg.com/@fordi-org/buildless';
+import { useContext } from 'preact/hooks';
+import createI18nContext from 'createI18nContext';
+
 import messageTable from './messageTable.js';
 
 const I18N = createI18nContext({

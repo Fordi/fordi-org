@@ -1,5 +1,6 @@
 
-import { route, useEffect } from 'https://unpkg.com/@fordi-org/buildless';
+import { useEffect } from 'preact/hooks';
+import { route } from 'preact-router';
  
 export default ({ to }) => {
   useEffect(() => route(to, true), []);

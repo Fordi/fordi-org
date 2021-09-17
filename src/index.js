@@ -1,4 +1,9 @@
-import { render, html, css, Router, asyncComponent, useState } from 'https://unpkg.com/@fordi-org/buildless';
+import { render } from 'preact';
+import { useState } from 'preact/hooks';
+import { Router } from 'preact-router';
+import html from 'html';
+import asyncComponent from 'asyncComponent';
+
 import I18n from './I18n.js';
 import Redirect from './Redirect.js';
 import Layout from './Layout.js';

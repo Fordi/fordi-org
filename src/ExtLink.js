@@ -1,4 +1,4 @@
-import { html, css } from 'https://unpkg.com/@fordi-org/buildless';
+import html from 'html';
 
 export default ({ children, ...props }) => html`
   <a

@@ -1,5 +1,5 @@
-import { html, css } from 'https://unpkg.com/@fordi-org/buildless';
-
+import html from 'html';
+import css from 'css';
 
 const { loading, container, swish1, swish2, swish3 } = css`
 .loading {

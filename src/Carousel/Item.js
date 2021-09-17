@@ -1,4 +1,6 @@
-import { html, css } from 'https://unpkg.com/@fordi-org/buildless';
+import html from 'html';
+import css from 'css';
+
 import ExtLink from '../ExtLink.js';
 
 const styles = css`

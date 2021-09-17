@@ -1,4 +1,10 @@
-import { html, css, useState, cloneElement, classes } from 'https://unpkg.com/@fordi-org/buildless';
+import { cloneElement } from 'preact';
+import { useState } from 'preact/hooks';
+
+import html from 'html';
+import css from 'css';
+import classes from 'classes';
+
 import { useI18n } from '../I18n.js';
 const {
   container,
