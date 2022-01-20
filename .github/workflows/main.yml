@@ -14,7 +14,7 @@ jobs:
       - name: Secure Copy
         uses: nogsantos/ssh-scp-deploy@v1.3.0
         with:
-          src: ${{ env.GITHUB_WORKSPACE }}/docs/*
+          src: ./docs/*
           host: ${{ secrets.SSH_HOST }}
           remote: ${{ secrets.SSH_DIR }}
           port: ${{ secrets.SSH_PORT }}
