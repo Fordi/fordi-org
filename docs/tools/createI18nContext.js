@@ -19,7 +19,7 @@ export default ({ messageTable, keyLang }) => {
         } else if (!lookup[language] && language !== keyLang) {
           console.warn(`No ${language} translation for "${id}"`);
         }
-        if ((keyLang && language === keyLang) || !lookup || !lookup[language]) {
+        if ((keyLang && language === keyLang) && !(lookup && lookup[language])) {
           return String.raw(strings, ...subs);
         }
         return String.raw({ raw: lookup[language].split('%%') }, ...subs);
