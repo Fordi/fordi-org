@@ -8,17 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Deploy to Dreamhost
     steps:
-      - name: Secure copy
-        env:
+      - name: Secure Copy
+        uses: nogsantos/ssh-scp-deploy@v1.3.0
+        with:
           src: ./docs/*
           host: ${{ secrets.SSH_HOST }}
           remote: ${{ secrets.SSH_DIR }}
-          port: 22
+          port: ${{ secrets.SSH_PORT }}
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-        run: |
-          echo "$host"
-          ls
-          
