@@ -1,4 +1,4 @@
-name: CI
+name: Deploy to Dreamhost
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy to Dreamhost
     steps:
-      - name: Deploy to Dreamhost
+      - name: SCP
         uses: nogsantos/ssh-scp-deploy@v1.3.0
         with:
           src: ./docs/*
