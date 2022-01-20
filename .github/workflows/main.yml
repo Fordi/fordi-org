@@ -11,10 +11,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
-      - name: Test
-        run: |
-          ls .
-          pwd .
       - name: Secure Copy
         uses: nogsantos/ssh-scp-deploy@v1.3.0
         with:
