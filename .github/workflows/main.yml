@@ -11,15 +11,14 @@ jobs:
     name: Deploy to Dreamhost
     steps:
       - name: Secure copy
-        with:
-          env:
-            src: ./docs/*
-            host: ${{ secrets.SSH_HOST }}
-            remote: ${{ secrets.SSH_DIR }}
-            port: 22
-            user: ${{ secrets.SSH_USER }}
-            key: ${{ secrets.SSH_KEY }}
+        env:
+          src: ./docs/*
+          host: ${{ secrets.SSH_HOST }}
+          remote: ${{ secrets.SSH_DIR }}
+          port: 22
+          user: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
         run: |
-          echo $host
+          echo "$host"
           ls
           
