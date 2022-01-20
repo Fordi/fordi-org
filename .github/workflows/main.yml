@@ -10,12 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy to Dreamhost
     steps:
-      - name: SCP
-        uses: nogsantos/ssh-scp-deploy@v1.3.0
+      - name: Secure copy
         with:
-          src: ./docs/*
-          host: ${{ secrets.SSH_HOST }}
-          remote: ${{ secrets.SSH_DIR }}
-          port: 22
-          user: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
+          env:
+            src: ./docs/*
+            host: ${{ secrets.SSH_HOST }}
+            remote: ${{ secrets.SSH_DIR }}
+            port: 22
+            user: ${{ secrets.SSH_USER }}
+            key: ${{ secrets.SSH_KEY }}
+        run: |
+          echo $host
+          ls
+          
