@@ -9,10 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2    
       - name: Secure Copy
         uses: nogsantos/ssh-scp-deploy@v1.3.0
         with:
-          src: ./docs/*
+          src: ${{ GITHUB_WORKSPACE }}/docs/*
           host: ${{ secrets.SSH_HOST }}
           remote: ${{ secrets.SSH_DIR }}
           port: ${{ secrets.SSH_PORT }}
