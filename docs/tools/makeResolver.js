@@ -10,8 +10,8 @@
  * Typical usage:
  *   const resolver = makeResolver(import.meta.url);
  *   const pictureUrl = resolve('./pretty-picture.png');
- * 
+ *
  * @param {String} baseUrl base url to resolve to
  * @returns {Resolver} resolver to the given baseUrl
  */
- export default baseUrl => relativeUri => new URL(relativeUri, baseUrl).toString();
+export default (baseUrl) => (relativeUri) => new URL(relativeUri, baseUrl).toString();

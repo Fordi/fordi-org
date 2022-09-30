@@ -1,4 +1,4 @@
-const joinClass = (...classes) => Array.from(new Set(classes.filter(a => !!a).join(' ').split(' ').reverse())).reverse().join(' ');
+export const joinClass = (...classes) => [...new Set(classes.filter(a => !!a).join(' ').split(' ').reverse())].reverse().join(' ');
 
 const classes = (...names) => Object.assign(
   (...more) => classes(...names, ...more),

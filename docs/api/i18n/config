@@ -1,0 +1,24 @@
+{
+  "languages": ["en", "es"],
+  "keys": [
+    "historyTitle",
+    "preEducation",
+    "school",
+    "clientWork",
+    "comcast",
+    "skillsTitle",
+    "ecosystem",
+    "flexibility",
+    "technology",
+    "futureTitle",
+    "ambitions",
+    "relationship",
+    "portfolioTitle",
+    "portfolio",
+    "portfolioComcast",
+    "portfolioRSuite",
+    "portfolioToys",
+    "portfolioFAO",
+    "portfolioVectrix"
+  ]
+}

@@ -1,4 +1,6 @@
-export default ({ useState }) => function useSelector(machine, selector) {
+import { useEffect, useState } from 'preact';
+
+export default (machine, selector) => {
   const [value, setValue] = useState(selector(machine.getState()));
   useEffect(
     () => machine.listen((newState, oldState) => {
@@ -7,8 +9,8 @@ export default ({ useState }) => function useSelector(machine, selector) {
       if (gnu !== old) {
         setValue(gnu);
       }
-    }), 
-    [updateState],
+    }),
+    [],
   );
   return value;
 };

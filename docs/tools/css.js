@@ -14,7 +14,7 @@ const createStylesheet = (str) => {
 const head = document.querySelector('head');
 const { sheet } = head.appendChild(document.createElement('style'));
 
-const clsRx = /\.([^ \.\[:>,]+)/g;
+const clsRx = /\.([^ .[:>,]+)/g;
 export default (...args) => createStylesheet(String.raw(...args));
 
 const appendId = (str, id) => str.endsWith(`_${id}`) ? str : `${str}_${id}`;
@@ -34,7 +34,7 @@ const insertRule = (rule, id) => {
           // Can have multiple values
           const [piece, ...pieces] = part.split(',');
           // Starts with a number; it's a time value or iteration count
-          if (/^[\.0-9]/.test(piece)) return part;
+          if (/^[.0-9]/.test(piece)) return part;
           // keywords
           if (aniKwRx.test(piece)) return part;
           // Not a keyword or numeric; it's an ID.

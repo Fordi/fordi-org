@@ -1,7 +1,7 @@
 import html from 'html';
 import css from 'css';
 
-const { loading, container, swish1, swish2, swish3 } = css`
+const { loading, show, container, swish1, swish2, swish3 } = css`
 .loading {
   background-color: #3b506b;
   display: flex;
@@ -10,7 +10,17 @@ const { loading, container, swish1, swish2, swish3 } = css`
   width: 100%;
   height: 100%;
   font-size: 141px;
-  position: relative;
+  position: absolute;
+  z-index: 9001;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s opacity;
+  top: 0;
+  left: 0;
+}
+.loading.show {
+  opacity: 1;
+  pointer-events: initial;
 }
 .container {
   position: relative;
@@ -89,8 +99,8 @@ const { loading, container, swish1, swish2, swish3 } = css`
 }
 `;
 
-export default () => html`
-  <div className=${loading}>
+export default ({ visible }) => html`
+  <div className=${loading.and(visible && show)}>
     <div className=${container}>
       <div className=${swish1} />
       <div className=${swish2} />

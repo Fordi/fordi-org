@@ -1,3 +1,5 @@
+import css from './css.js';
+
 const order = ['embedded-opentype', 'woff2', 'woff', 'truetype', 'svg'];
 const extMap = { ttf: 'truetype', eot: 'embedded-opentype' };
 
@@ -10,7 +12,7 @@ const extMap = { ttf: 'truetype', eot: 'embedded-opentype' };
  */
 export default (...paths) => {
   const fonts = paths.reduce((o, path) => {
-    const ext = path.replace(/^.*\.([^\.]+)(?:#.*)?$/, '$1').toLowerCase();
+    const ext = path.replace(/^.*\.([^.]+)(?:#.*)?$/, '$1').toLowerCase();
     const obj = { path, type: extMap[ext] || ext };
     if (obj.type === extMap.eot) {
       o.eot = path;

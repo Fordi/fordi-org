@@ -16,10 +16,16 @@ const createServer = (options, handler) => {
 
 app.use(express.static(staticRoot));
 app.use((req, res) => {
-  res.sendFile(resolve(staticRoot, 'index.html'));
+  if (req.path.startsWith(`/api/`) || /\.[^.]+$/.test(req.path)) {
+    res.status(404).send("");
+  } else {
+    res.sendFile(resolve(staticRoot, 'index.html'));
+  }
 });
 
 const server = createServer({}, app);
 const port = process.env.PORT || 3000;
 
-!isTest && server.listen(port, () => console.log(`${name} listening at 'http://localhost:${port}`));
+!isTest && server.listen(port, () => {
+  console.info(`${name} listening at 'http://localhost:${port}`)
+});

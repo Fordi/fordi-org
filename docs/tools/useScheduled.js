@@ -11,7 +11,7 @@ export default (fn, timeout = 250) => {
     params = null;
   };
   useEffect(() => commit);
-  return (...args) =>{
+  return (...args) => {
     params = args;
     if (handle !== null) clearTimeout(handle);
     handle = setTimeout(commit, timeout);
