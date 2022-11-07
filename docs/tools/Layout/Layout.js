@@ -1,8 +1,7 @@
 import { createElement } from 'preact';
 import { useContext, useEffect, useState } from 'preact/hooks';
-import LayoutComponent from './LayoutComponent.js';
 import DefaultErrorComponent from './DefaultErrorComponent.js';
-import LayoutContext from './LayoutContext.js';
+import LayoutContext, { LayoutComponent } from './LayoutContext.js';
 
 const delay = (t) => new Promise((r) => setTimeout(r, t));
 

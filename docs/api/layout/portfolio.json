@@ -24,12 +24,14 @@
               "href": "https://customer.xfinity.com",
               "image": "Portfolio/xfinity.png",
               "alt": "Xfinity MyAccount",
-              "title": { "component": [
-                "svg/XfinityLogo", {
-                  "style": { "marginTop": -18 },
-                  "alt": "Xfinity MyAccount"
-                }
-              ]},
+              "title": {
+                "component": [
+                  "svg/XfinityLogo", {
+                    "style": { "marginTop": -18 },
+                    "alt": "Xfinity MyAccount"
+                  }
+                ]
+              },
               "flavorKey": "portfolioComcast"
             }
           ],
