@@ -1,8 +1,8 @@
-import { render } from 'preact';
-import html from 'html';
-import { LayoutRouter } from 'Layout';
-import Layout from './config/Layout.js';
-import Loading from './Loading.js';
+import { render } from "preact";
+import html from "html";
+import { LayoutRouter } from "Layout";
+import Layout from "./config/Layout.js";
+import Loading from "./Loading.js";
 
 const Index = () => html`
   <${Layout}>
@@ -14,5 +14,4 @@ const Index = () => html`
   <//>
 `;
 
-
-render(html`<${Index}/>`, document.body);
+render(html`<${Index} />`, document.body);

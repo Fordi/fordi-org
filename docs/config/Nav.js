@@ -1,8 +1,8 @@
-import html from 'html';
-import css from 'css';
+import html from "html";
+import css from "css";
 
-import ExtLink from '../components/ExtLink/index.js';
-import NavLink from '../components/NavLink/index.js';
+import ExtLink from "../components/ExtLink/index.js";
+import NavLink from "../components/NavLink/index.js";
 
 const styles = css`
   .nav {
@@ -14,7 +14,8 @@ const styles = css`
     margin-top: -96px;
     position: relative;
   }
-  .logo, .language {
+  .logo,
+  .language {
     background: #99e8ff;
   }
   .language {
@@ -29,7 +30,8 @@ const styles = css`
     margin-right: 10px;
     cursor: pointer;
   }
-  .callout, .logo {
+  .callout,
+  .logo {
     vertical-align: bottom;
     flex: 0 0 auto;
   }
@@ -46,18 +48,23 @@ const styles = css`
     transition: top 0.4s;
     top: -45px;
   }
-  .resume {}
+  .resume {
+  }
   .button:focus {
     outline: none;
   }
 `;
 
-const textButton = styles.button.and('button--text');
+const textButton = styles.button.and("button--text");
 
 export default ({ setLanguage }) => html`
   <div className=${styles.nav}>
-    <img className=${styles.logo} src="./res/fordi.png" alt="Personal logo" style=${{ height: 96 }} />
-    <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 40 141" width="40" height="141" className=${styles.callout}>
+    <img className=${
+      styles.logo
+    } src="./res/fordi.png" alt="Personal logo" style=${{ height: 96 }} />
+    <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 40 141" width="40" height="141" className=${
+      styles.callout
+    }>
       <path fill="#99e8ff" d="M0 0v141h13c9-6 0-22 0-22s13 8 16 22h11V0H29c-3 14-16 22-16 22s9-16 0-22z"/>
     </svg>
     <div className=${styles.controls}>
@@ -65,9 +72,9 @@ export default ({ setLanguage }) => html`
         Portfolio
       <//>
       <span className=${styles.resume}>
-        ${'Resume: '}
+        ${"Resume: "}
         <${ExtLink} className=${textButton} href="./res/Bryan_Elliott.docx">Word</ExtLink>
-        ${' | '}
+        ${" | "}
         <${ExtLink} className=${textButton} href="./res/Bryan_Elliott.md">Text</ExtLink>
       </span>
       <${NavLink} href="/about" className="button--text">
@@ -75,8 +82,12 @@ export default ({ setLanguage }) => html`
       <//>
     </div>
     <div className=${styles.language}>
-      <button onClick=${() => setLanguage('en')}><img src="./res/en.png" alt="English" /></button>
-      <button onClick=${() => setLanguage('es')}><img src="./res/es.png" alt="Español" /></button>
+      <button onClick=${() =>
+        setLanguage("en")}><img src="./res/en.png" alt="English" /></button>
+      <button onClick=${() =>
+        setLanguage("es")}><img src="./res/es.png" alt="Español" /></button>
+      <button onClick=${() =>
+        setLanguage("jp")}><img src="./res/jp.png" alt="日本人" /></button>
     </div>
   </div>
 `;

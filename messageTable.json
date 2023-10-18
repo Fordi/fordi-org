@@ -1,0 +1,109 @@
+{
+  "languages": [
+    "en",
+    "es",
+    "jp"
+  ],
+  "messageTable": {
+    "historyTitle": [
+      "a brief history",
+      "una breve historia",
+      "簡単な歴史"
+    ],
+    "preEducation": [
+      "Bryan's first experience with programming was in second grade. Dad had just bought their first computer, and Bryan spend months poring over the GW Basic syntax manual, testing commands, breaking things, and wondering what a \"Syntax\" was.",
+      "La primera experiencia de Bryan con la programación fue en segundo grado. Papá tenía acaba de comprar su primera computadora, y Bryan pasó meses estudiando el manual de sintaxis GW Basic, probando comandos, rompiendo cosas y preguntándose qué era una \"Sintaxis\".",
+      "ブライアンが初めてプログラミングを体験したのは小学 2 年生のときでした。 父は最初のコンピューターを買ったばかりで、ブライアンは何か月もかけて GW Basic 構文マニュアルを熟読し、コマンドをテストし、何かを壊し、「構文」とは何なのかを考えました。"
+    ],
+    "school": [
+      "Through middle and high schools, Bryan taught himself Turbo Pascal, rudimentary game programming, Assembly Language, C, and ultimately HTML and JavaScript.",
+      "A través de las escuelas intermedias y secundarias, Bryan se enseñó a sí mismo Turbo Pascal,  programación de juegos rudimentaria, lenguaje ensamblador, C y, en última instancia, HTML  y JavaScript.",
+      "ブライアンは中学、高校を通じて、Turbo Pascal、初歩的なゲーム プログラミング、アセンブリ言語、C、そして最終的には HTML と JavaScript を独学で学びました。"
+    ],
+    "clientWork": [
+      "Since then, he has freelanced for a number of clients in the Philadelphia area, including The Wharton School, Abacus Studios, Sevens and Sixes, and I-SITE. He then spent two years at TrueAction, Inc., building the UI for demanding eCommerce clients like Toys R Us. At RSI Content Solutions, he creating the UI and much of the back-end for RSuite CMS version 5. At Comcast, he helped to transition the large MyAccount and payment portals from a monolithic Angular 1.4 app into a suite of small React apps, then helped to leverage Sitecore for the site's content.",
+      "Desde entonces, ha trabajado independientemente para varios clientes en el área de Filadelfia, incluidos The Wharton School, Abacus Studios, Sevens and Sixes e I-SITE. Luego pasó dos años en TrueAction, Inc., creando la interfaz de usuario para clientes de comercio electrónico exigentes como Toys R Us. En RSI Content Solutions, creó la interfaz de usuario y gran parte del back-end para RSuite CMS versión 5. En Comcast, ayudó a realizar la transición de los grandes portales de pago y MyAccount de una aplicación monolítica Angular 1.4 a un conjunto de pequeñas aplicaciones React, luego ayudó a aprovechar Sitecore para el contenido del sitio.",
+      "それ以来、ウォートン スクール、アバカス スタジオ、セブンズ アンド シックス、I-SITE など、フィラデルフィア地域の多くのクライアントをフリーランスとして担当してきました。 その後、TrueAction, Inc. で 2 年間、トイザらスなどの要求の厳しい e コマース クライアント向けの UI を構築しました。 RSI Content Solutions では、RSuite CMS バージョン 5 の UI とバックエンドの多くを作成しました。 Comcast では、大規模な MyAccount および支払いポータルをモノリシックな Angular 1.4 アプリから小規模な React アプリのスイートに移行するのを支援しました。 サイトのコンテンツに Sitecore を活用するのに役立ちました。"
+    ],
+    "current": [
+      "At present, he's an engineer with CesiumGS, an open-source company that specializes in 3D geospatial solutions.  He's a senior software developer with their Smart Construction team, working with EARTHBRAIN and Komatsu to bring 3D visualizations and real-time data to earthworks projects.",
+      "Actualmente es ingeniero en CesiumGS, una empresa de código abierto que se especializa en soluciones geoespaciales 3D. Es desarrollador de software senior del equipo de Smart Construction y trabaja con EARTHBRAIN y Komatsu para llevar visualizaciones 3D y datos en tiempo real a proyectos de movimiento de tierras.",
+      "現在、彼は 3D 地理空間ソリューションを専門とするオープンソース企業 CesiumGS のエンジニアです。 彼はスマート コンストラクション チームの上級ソフトウェア開発者であり、EARTHBRAIN およびコマツと協力して 3D ビジュアライゼーションとリアルタイム データを土工プロジェクトに導入しています。"
+    ],
+    "skillsTitle": [
+      "a particular set of skills",
+      "un conjunto particular de habilidades",
+      "特定のスキルセット"
+    ],
+    "ecosystem": [
+      "Webdev has become a complex space of frameworks, libraries, languages, language flavors, linters, compilers, services, and continuous integrators.  No more can you afford to waste time on a simple HTML and CSS jockey - you need someone who can navigate the world of node, Ruby, Java and more.",
+      "Webdev se ha convertido en un espacio complejo de marcos, bibliotecas, lenguajes,  sabores de lenguaje, linters, compiladores, servicios y continuos  integradores. Ya no puede permitirse perder el tiempo en un HTML simple y  Jockey CSS: necesitas a alguien que pueda navegar por el mundo de node, Ruby,  Java y más.",
+      "Webdev は、フレームワーク、ライブラリ、言語、言語フレーバー、リンター、コンパイラー、サービス、継続的インテグレーターからなる複雑な空間となっています。 単純な HTML と CSS の調整に時間を無駄にする余裕はもうありません。ノード、Ruby、Java などの世界をナビゲートできる人が必要です。"
+    ],
+    "flexibility": [
+      "Bryan has taken on much of what's popular in the professional web development world, and is competent to hit the ground running on almost any project environment.  He's opinionated when it matters, but he'll happily adapt to whatever practices exist in the shop.",
+      "Bryan ha asumido gran parte de lo que es popular en la web profesional  mundo del desarrollo, y es competente para empezar a trabajar  casi cualquier entorno de proyecto. Él es obstinado cuando importa  pero se adaptará felizmente a cualquier práctica existente en la tienda.",
+      "Webdev は、フレームワーク、ライブラリ、言語、言語フレーバー、リンター、コンパイラー、サービス、継続的インテグレーターからなる複雑な空間となっています。 単純な HTML と CSS の調整に時間を無駄にする余裕はもうありません。ノード、Ruby、Java などの世界をナビゲートできる人が必要です。"
+    ],
+    "technology": [
+      "CSS?  SCSS? LESS?  He's mastered it.  React?  Angular?  Ember? Bryan can work on it.  Rails?  Spring?  Doesn't matter; he's done it before.",
+      "CSS? SCSS? ¿MENOS? Lo ha dominado. ¿Reaccionar? ¿Angular? ¿Ascua? Bryan puede trabajar en ello. ¿Rieles? ¿Primavera? No importa; lo ha hecho antes. ¿Nuevas transformaciones? ¿Análisis? Los verdaderos programadores no le temen a las matemáticas.",
+      "CSS? ＳＣＳＳ？ 少ない？ 彼はそれをマスターしました。 反応しますか？ 角ばった？ 残り火？ ブライアンはそれに取り組むことができます。 レール？ 春？ 関係ない; 彼は以前にそれをやったことがあります。 斬新な変身？ 分析? 本物のプログラマーは数学を恐れません。"
+    ],
+    "futureTitle": [
+      "future targets",
+      "objetivos futuros",
+      "未来目標"
+    ],
+    "ambitions": [
+      "Bryan's ambitions are relatively simple. He would like to work on innovative software, and make it a pleasure for others to work on - \"others\" being a term that includes himself in six months: maintenance can be as challenging as development, and good test-driven development, coupled with good documentation, can ease that pain.",
+      "Las ambiciones de Bryan son relativamente simples. Le gustaría trabajar en software innovador,  y hacer que sea un placer para otros trabajar - \"otros\" es un término que incluye  él mismo en seis meses: el mantenimiento puede ser tan desafiante como el desarrollo, y  El desarrollo basado en pruebas, junto con una buena documentación, puede aliviar ese dolor.",
+      "ブライアンの野心は比較的単純です。 彼は、革新的なソフトウェアに取り組み、他の人がそれに取り組むのが楽しいものにしたいと考えています。「他の人」とは、6 か月以内に自分自身を含む用語です。メンテナンスは開発と同じくらい難しい場合があり、優れたテスト駆動開発と組み合わせて、 適切なドキュメントがあれば、その苦痛は軽減されます。"
+    ],
+    "relationship": [
+      "Past that, he would like to have a relationship with a company with clear goals, excellent management, and a developement team that is open to new ideas and technologies.",
+      "Más allá de eso, le gustaría tener una relación con una empresa con objetivos claros,  excelente gestión, y un equipo de desarrollo abierto a nuevas ideas y  tecnologías.",
+      "その後は、明確な目標、優れた経営陣、新しいアイデアやテクノロジーを受け入れる開発チームを持つ会社との関係を築きたいと考えています。"
+    ],
+    "portfolioTitle": [
+      "You Are Here",
+      "Estás Aquí",
+      "君はここにいる"
+    ],
+    "portfolio": [
+      "Bryan enjoys playing with innovative ways of building things, usually starting with this page.  Visit the repo to see how he wrote this one.",
+      "Bryan disfruta jugando con formas innovadoras de construir cosas, generalmente comenzando\n   con esta página. Visite el repositorio para ver cómo escribió este usando ",
+      "ブライアンは、物事を構築する革新的な方法で遊ぶことを楽しんでおり、通常はこのページから始めます。 彼がこれをどのように書いたかを見るには、リポジトリにアクセスしてください。"
+    ],
+    "portfolioCesium": [
+      "TBD",
+      "",
+      ""
+    ],
+    "portfolioComcast": [
+      "Bryan helped to maintain Comcast's various customer portals, working in React and Angular, and picking up Ruby and Rails.  The job was to prevent downtime, ensure the security of transactions and personal information, and to create the best possible customer experience by working together with several upstream API teams to implement new features.",
+      "Bryan ayudó a mantener varios portales de clientes de Comcast, trabajando en React y  Angular y recogiendo Ruby y Rails. El trabajo consistía en evitar el tiempo de inactividad, garantizar  la seguridad de las transacciones y la información personal, y para crear la mejor  posible experiencia del cliente al trabajar junto con varios equipos de API ascendentes  para implementar nuevas funciones.",
+      "Bryan は Comcast のさまざまな顧客ポータルの維持を支援し、React と Angular で作業し、Ruby と Rails を習得しました。 その仕事は、いくつかの上流 API チームと協力して新機能を実装することで、ダウンタイムを防ぎ、トランザクションと個人情報のセキュリティを確保し、可能な限り最高の顧客エクスペリエンスを生み出すことでした。"
+    ],
+    "portfolioRSuite": [
+      "Bryan developed the user interface for RSI Content Solutions’ main product, RSuite, from scratch.  Leveraging Ember, LESS, and building REST services in Java, he focused on functionality, extensibility, and performance.  The single-page web application is used by publishing houses across the globe…",
+      "Bryan desarrolló la interfaz de usuario para la interfaz principal de RSI Content Solutions.  producto, RSuite, desde cero. Aprovechando Ember, LESS y construyendo DESCANSO  servicios en Java, se centró en la funcionalidad, la extensibilidad y  actuación. Las editoriales utilizan la aplicación web de una sola página  a traves del globo…",
+      "ブライアンは、RSI Content Solutions の主力製品である RSuite のユーザー インターフェイスをゼロから開発しました。 Ember、LESS を活用し、Java で REST サービスを構築することで、機能、拡張性、パフォーマンスに重点を置きました。 シングルページの Web アプリケーションは、世界中の出版社で使用されています…"
+    ],
+    "portfolioToys": [
+      "Bryan’s role as part of the Toys‘R’Us conversion team was that of converting Prototype-dependent scripts to jQuery, converting an include-based JSP website into one that leverages Tiles, and ensuring W3C validation throughout the site.",
+      "El papel de Bryan como parte del equipo de conversión de Toys‘R’Us fue el de  convertir scripts dependientes de prototipos a jQuery, convertir un  sitio web JSP basado en incluir en uno que aproveche Tiles y garantice W3C  validación en todo el sitio.",
+      "トイザらス変換チームの一員としてのブライアンの役割は、プロトタイプ依存のスクリプトを jQuery に変換し、インクルードベースの JSP Web サイトをタイルを活用する Web サイトに変換し、サイト全体で W3C 検証を保証することでした。"
+    ],
+    "portfolioFAO": [
+      "Bryan developed the web interface for the Muppet Whatnot Workshop, allowing an online shopper to customize their own Muppet-themed plush.",
+      "Bryan desarrolló la interfaz web para Muppet Whatnot Workshop, lo que permitió  comprador en línea para personalizar su propio peluche con temática de Muppet.",
+      "ブライアンは、オンライン買い物客がマペットをテーマにしたぬいぐるみを自分でカスタマイズできるようにする、マペット ホワットノット ワークショップの Web インターフェイスを開発しました。"
+    ],
+    "portfolioVectrix": [
+      "Whether calculating your gasoline savings with a Vectrix scooter versus other vehicles, or determining how far you can go on a full charge, Bryan's code enables you.",
+      "Ya sea para calcular sus ahorros de gasolina con un scooter Vectrix frente a otros  vehículos, o determinar qué tan lejos puede llegar con una carga completa, el código de Bryan le permite.",
+      "Vectrix スクーターと他の車両でのガソリン節約量を計算したり、フル充電でどのくらいの距離を走行できるかを判断したりする場合でも、Bryan のコードを使用するとそれが可能になります。"
+    ]
+  }
+}

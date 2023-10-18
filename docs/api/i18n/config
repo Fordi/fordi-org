@@ -1,11 +1,15 @@
 {
-  "languages": ["en", "es"],
+  "languages": [
+    "en",
+    "es",
+    "jp"
+  ],
   "keys": [
     "historyTitle",
     "preEducation",
     "school",
     "clientWork",
-    "comcast",
+    "current",
     "skillsTitle",
     "ecosystem",
     "flexibility",
@@ -15,6 +19,7 @@
     "relationship",
     "portfolioTitle",
     "portfolio",
+    "portfolioCesium",
     "portfolioComcast",
     "portfolioRSuite",
     "portfolioToys",

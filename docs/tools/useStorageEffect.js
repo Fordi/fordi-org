@@ -1,5 +1,5 @@
-import { useEffect } from 'preact/hooks';
-import { onCall, offCall } from './spy.js';
+import { useEffect } from "preact/hooks";
+import { onCall, offCall } from "./spy.js";
 
 let listenerOn = false;
 let storeCount = 0;
@@ -14,9 +14,13 @@ const storageEventListener = (event) => {
   // Fast-fails
   const keyListeners = storageEvents.get(storageArea);
   // Not listening on this store
-  if (!keyListeners) return;
+  if (!keyListeners) {
+    return;
+  }
   // Not listening to this key
-  if (key && !(key in keyListeners)) return;
+  if (key && !(key in keyListeners)) {
+    return;
+  }
   // No key means a global change (like .clear())
   if (!key) {
     Object.keys(keyListeners).forEach((k) => {
@@ -43,10 +47,12 @@ const storageChangeListener = (key, newValue) => {
 
 const startListening = () => {
   // If already listening, skip this.
-  if (listenerOn) return;
+  if (listenerOn) {
+    return;
+  }
   listenerOn = true;
   // Captures storage events coming from another window.
-  window.addEventListener('storage', storageEventListener);
+  window.addEventListener("storage", storageEventListener);
 };
 
 const startListeningTo = (store) => {
@@ -55,9 +61,9 @@ const startListeningTo = (store) => {
     // Storage events don't happen on the same window.
     // Pay attention to storage-changing methods so we
     //  have awareness of in-app changes.
-    onCall(sessionStorage, 'setItem', storageChangeListener);
-    onCall(sessionStorage, 'removeItem', storageChangeListener);
-    onCall(sessionStorage, 'clear', storageChangeListener);
+    onCall(sessionStorage, "setItem", storageChangeListener);
+    onCall(sessionStorage, "removeItem", storageChangeListener);
+    onCall(sessionStorage, "clear", storageChangeListener);
     // make a hash for keys
     storageEvents.set(store, {});
     // Weakmaps don't keep a length, so we need to.
@@ -68,19 +74,21 @@ const startListeningTo = (store) => {
 
 const stopListening = () => {
   // If not listening, skip this.
-  if (!listenerOn) return;
+  if (!listenerOn) {
+    return;
+  }
   listenerOn = false;
   // Remove the event listener
-  window.removeEventListener('storage', storageEventListener);
+  window.removeEventListener("storage", storageEventListener);
 };
 
 const stopListeningTo = (store) => {
   // Already not listening.  Skip.
   if (storageEvents.has(store)) {
     // Remove the change listeners
-    offCall(sessionStorage, 'setItem', storageChangeListener);
-    offCall(sessionStorage, 'removeItem', storageChangeListener);
-    offCall(sessionStorage, 'clear', storageChangeListener);
+    offCall(sessionStorage, "setItem", storageChangeListener);
+    offCall(sessionStorage, "removeItem", storageChangeListener);
+    offCall(sessionStorage, "clear", storageChangeListener);
     // Clean up
     storageEvents.delete(store, {});
     storeCount -= 1;

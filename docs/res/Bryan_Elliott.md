@@ -1,143 +1,140 @@
-BRYAN ELLIOTT
--------------
+# Bryan Elliott
 
-## UX Architect
+## Senior Software Engineer
 
-Email: ook@codemonkeybryan.com
+Email: <ook@codemonkeybryan.com>
 
 Phone: +1-267-475-7721
 
-* Web and Java development, user experience design, project architecture
-* Years of Experience: 11
+- Web and Java development, user experience design, project architecture
+- Years of Experience: 11
 
-SKILLS
-------
+## SKILLS
 
-General skills
-==============
+### General skills
 
-* Front-end web development
-* Server-side / Java development
-* User interacton and experience
-* Informaton architecture
-* Sofware and systems development
-* Content management system development
+- Front-end web development
+- Server-side / Java development
+- User interacton and experience
+- Informaton architecture
+- Sofware and systems development
+- Content management system development
 
-Languages
-=========
+### Languages
 
-### Professional - languages in which I have written deliverable code
+#### Professional - languages in which I have written deliverable code
 
-* JavaScript
-* Java
-* HTML5
-* XML
-* Handlebars
-* CSS
-* LESS
-* Objective C
-* ANTLR
-* PEG
-* Groovy
-* Ruby
-* SASS
-* SCSS
-* ECMAScript 6
+- JavaScript
+- Java
+- HTML5
+- XML
+- Handlebars
+- CSS
+- LESS
+- Objective C
+- ANTLR
+- PEG
+- Groovy
+- Ruby
+- SASS
+- SCSS
+- ECMAScript 6
 
-### Hobby - languages in which I done signifcant personal work
+#### Hobby - languages in which I done signifcant personal work
 
-* C#
-* C++
-* C
-* Arduino
-* TypeScript
-* Lua
-* Waxeye
-* Python
-* Go
-* Haxe
+- C#
+- C++
+- C
+- Arduino
+- TypeScript
+- Lua
+- Waxeye
+- Python
+- Go
+- Haxe
+- GDScript
 
-Version control systems
-=======================
+### Version control systems
 
-* SVN
-* Git
-* CVS
-* Hg
-* Bazaar
+- SVN
+- Git
+- CVS
+- Hg
+- Bazaar
 
-SPECIFIC EXPERIENCE
--------------------
+## Specific Experience
 
+### [Cesium GS, Inc.](https://github.com/CesiumGS) - 08/2023 to Present
 
-Comcast (via TekSystems) - 11/2017 to Present
-=============================================
+#### Senior Software Developer
 
-### UI Developer
+- Part of the Smart Construction squad at Cesium, working in coordination with EARTHBRAIN and Komatsu
+- Worked with 3D geospatial data, transforms, formats, and experiences
+- Primary work in Javascript - client and server-side
+- Occasional secondary work in Unity / C++ for Smart Construction VR
+- Proud to finally be part of an open-source company
 
-* Responsible for maintaining existing Angular 1.x MyAccount application
-* Disassembled MyAccount into micro-apps, porting functionality from 
-    Angular 1.x to React / Redux
-* Implemented OAuth2 client SSO for various user flows
-* Implemented client-side payment encryption
-* Implemented build/deploy logic atop existing gulp and CRA2 scripts
+### Comcast - 11/2017 to 08/2023
 
-Orbis Technologies, Inc. - 09/2011 to 11/2017
-=============================================
+#### UI Developer
 
-### UX Architect
+- Responsible for maintaining existing Angular 1.x MyAccount application
+- Disassembled MyAccount into micro-apps, porting functionality from
+  Angular 1.x to React / Redux
+- Implemented OAuth2 client SSO for various user flows
+- Implemented client-side payment encryption
+- Implemented build/deploy logic atop existing gulp and CRA2 scripts
 
-* Responsible for development of the user interface of RSuite 5 and RSuite 4,
-    including specification and development of REST services in Java
-* Rebuilt RSuite from scratch using Ember.js, Handlebars, and LESS
-* Built Java-based minification/concatenation for Javascript and LESS/CSS resources
-* Refactored RSuite 3.6 to RSuite 3.7 to solve a large number of performance and usability issues.
-* Developed client-side plugin framework and implemented many plugins for RSuite
-* Extended preexisting server-side plugin framework using Java annotations and reflection
+### Orbis Technologies, Inc. - 09/2011 to 11/2017
 
-TrueAction, Inc. - 07/2009 to 09/2011
-=====================================
+#### UX Architect
 
-### Sr. Web Developer
+- Responsible for development of the user interface of RSuite 5 and RSuite 4,
+  including specification and development of REST services in Java
+- Rebuilt RSuite from scratch using Ember.js, Handlebars, and LESS
+- Built Java-based minification/concatenation for Javascript and LESS/CSS resources
+- Refactored RSuite 3.6 to RSuite 3.7 to solve a large number of performance and usability issues.
+- Developed client-side plugin framework and implemented many plugins for RSuite
+- Extended preexisting server-side plugin framework using Java annotations and reflection
 
-* Collaborated on large, tight-deadline e-commerce projects
-* Learned Java, SVN, Git, and formal sofware architecture
-* Worked with jQuery, Prototype, Spring, Maven
+### TrueAction, Inc. - 07/2009 to 09/2011
 
-Sevens and Sixes - 11/2007 to 07/2009
-=====================================
+#### Sr. Web Developer
 
-### Web Developer (Contract)
+- Collaborated on large, tight-deadline e-commerce projects
+- Learned Java, SVN, Git, and formal sofware architecture
+- Worked with jQuery, Prototype, Spring, Maven
 
-* Interacted with clients
-* Estmated projects
-* Mobile web development
-* MVC architecture (via CakePHP)
-* XHTML 1.0 / CSS2 
+### Sevens and Sixes - 11/2007 to 07/2009
 
-I-Site, Inc. - 11/2008 to 07/2009
-=================================
+#### Web Developer (Contract)
 
-### Web Developer (Contract)
+- Interacted with clients
+- Estmated projects
+- Mobile web development
+- MVC architecture (via CakePHP)
+- XHTML 1.0 / CSS2
 
-* Developed advert sing sites for a number of clients using PHP (v5, OOP), Drupal, Flash
-* Developed the iGorilla app in Object ve C
-* Learned Google Maps API, Linux server admin, Apache config, jQuery 
+### I-Site, Inc. - 11/2008 to 07/2009
 
-Abacus Studios, Inc. - 05/2006 to 07/2009
-=========================================
+#### Web Developer (Contract)
 
-### Web developer (Contract partner)
+- Developed advert sing sites for a number of clients using PHP (v5, OOP), Drupal, Flash
+- Developed the iGorilla app in Object ve C
+- Learned Google Maps API, Linux server admin, Apache config, jQuery
 
-* Developed websites and shops to clients' specifcatons and partner's design
-* Learned Javascript, Prototype, PHP (v4, functional), Paypal API, 
-  cross-browser design implementaton, automated maintenance, test-driven 
+### Abacus Studios, Inc. - 05/2006 to 07/2009
+
+#### Web developer (Contract partner)
+
+- Developed websites and shops to clients' specifcatons and partner's design
+- Learned Javascript, Prototype, PHP (v4, functional), Paypal API,
+  cross-browser design implementaton, automated maintenance, test-driven
   development
 
-Wharton Alumni Affairs - 01/2006 to 05/2006
-===========================================
+### Wharton Alumni Affairs - 01/2006 to 05/2006
 
-### Web developer (Project)
+#### Web developer (Project)
 
-* Reallocated from my job as Administratve Assistant to build the Wharton Alumni Affairs website
-* Leaned HTML 4.01 and CSS, as well as basic JavaScript, ColdFusion, and other early web technologies
+- Reallocated from my job as Administratve Assistant to build the Wharton Alumni Affairs website
+- Leaned HTML 4.01 and CSS, as well as basic JavaScript, ColdFusion, and other early web technologies

@@ -1,0 +1,17 @@
+{
+  "search.exclude": {
+    "**/.git": true
+  },
+  "files.exclude": {
+    "**/.eslintcache": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "emmet.includeLanguages": {
+    "javascript": "html"
+  },
+  "path-intellisense.extensionOnImport": true
+}

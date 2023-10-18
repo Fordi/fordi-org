@@ -1,31 +1,27 @@
-const express = require('express');
-const http = require('http');
+import express from "express";
+import { createServer } from "http";
+import { readFile } from "fs/promises";
+import { resolve, dirname } from "path";
 
-const { resolve } = require('path');
-const isTest = process.argv.indexOf('-t') !== -1;
-
-const resApp = n => resolve(resolve(__dirname, '..'), n);
-const { name } = require(resApp('package.json'));
-const staticRoot = resApp('docs');
+const resApp = (n) =>
+  resolve(resolve(dirname(new URL(import.meta.url).pathname), ".."), n);
+const { name } = JSON.parse(await readFile(resApp("package.json"), "utf8"));
+const staticRoot = resApp("docs");
 
 const app = express();
-
-const createServer = (options, handler) => {
-  return http.createServer({ ...options}, handler);
-};
 
 app.use(express.static(staticRoot));
 app.use((req, res) => {
   if (req.path.startsWith(`/api/`) || /\.[^.]+$/.test(req.path)) {
     res.status(404).send("");
   } else {
-    res.sendFile(resolve(staticRoot, 'index.html'));
+    res.sendFile(resolve(staticRoot, "index.html"));
   }
 });
 
 const server = createServer({}, app);
 const port = process.env.PORT || 3000;
 
-!isTest && server.listen(port, () => {
-  console.info(`${name} listening at 'http://localhost:${port}`)
+server.listen(port, () => {
+  console.info(`${name} listening at 'http://localhost:${port}`);
 });

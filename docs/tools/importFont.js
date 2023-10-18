@@ -1,7 +1,7 @@
-import css from './css.js';
+import css from "./css.js";
 
-const order = ['embedded-opentype', 'woff2', 'woff', 'truetype', 'svg'];
-const extMap = { ttf: 'truetype', eot: 'embedded-opentype' };
+const order = ["embedded-opentype", "woff2", "woff", "truetype", "svg"];
+const extMap = { ttf: "truetype", eot: "embedded-opentype" };
 
 /**
  * @function importFont
@@ -12,7 +12,7 @@ const extMap = { ttf: 'truetype', eot: 'embedded-opentype' };
  */
 export default (...paths) => {
   const fonts = paths.reduce((o, path) => {
-    const ext = path.replace(/^.*\.([^.]+)(?:#.*)?$/, '$1').toLowerCase();
+    const ext = path.replace(/^.*\.([^.]+)(?:#.*)?$/, "$1").toLowerCase();
     const obj = { path, type: extMap[ext] || ext };
     if (obj.type === extMap.eot) {
       o.eot = path;
@@ -20,15 +20,21 @@ export default (...paths) => {
     }
     return { ...o, [obj.type]: obj.path };
   }, {});
-  const fontName = 'font_' + Math.random().toString(36).substr(2);
-  css`
+  const fontName = `font_${Math.random().toString(36).substring(2)}`;
+  const cssText = `
     @font-face {
-      font-family: '${fontName}';
-      ${fonts.eot ? `src: url('${fonts.eot}');` : ''}
-      src: ${order.map((type) => fonts[type] && `url('${fonts[type]}') format('${type}')`).filter(a => a).join(', ')};
+      font-family: "${fontName}";
+      ${fonts.eot ? `src: url('${fonts.eot}');` : ""}
+      src: ${order
+        .map((type) => fonts[type] && `url('${fonts[type]}') format('${type}')`)
+        .filter((a) => a)
+        .join(", ")};
       font-weight: normal;
       font-style: normal;
     }
+  `;
+  void css`
+    ${cssText}
   `;
   return fontName;
 };

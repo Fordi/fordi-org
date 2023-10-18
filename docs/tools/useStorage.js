@@ -1,15 +1,19 @@
-import { useState, useEffect, useCallback } from 'preact/hooks';
-import useStorageEffect from './useStorageEffect.js';
+import { useState, useEffect, useCallback } from "preact/hooks";
+import useStorageEffect from "./useStorageEffect.js";
 
 function updateStorage(store, stateKey, state) {
   const current = store.getItem(stateKey);
   if (state === null || state === undefined) {
-    if (current) store.removeItem(stateKey);
+    if (current) {
+      store.removeItem(stateKey);
+    }
     return;
   }
   // Don't trigger storage events without a change.
   const json = JSON.stringify(state);
-  if (json === current) return;
+  if (json === current) {
+    return;
+  }
   store.setItem(stateKey, json);
 }
 
@@ -31,7 +35,7 @@ export const useStorage = (store, stateKey, defaultValue) => {
     const stored = store.getItem(stateKey);
     if (stored) {
       try {
-        return JSON.parse(stored ?? '');
+        return JSON.parse(stored ?? "");
       } catch (e) {
         // fall through
       }
@@ -52,27 +56,33 @@ export const useStorage = (store, stateKey, defaultValue) => {
 
   // Callback to be called whenever the value for
   // `store.getItem(key)` changes.
-  const onStorageChange = useCallback((event) => {
-    const { newValue } = event;
-    // Don't trigger storage events without a change.
-    const json = JSON.stringify(state);
-    if (newValue === json) return;
-    let newState = initialValue;
-    try {
-      // Attempt to parse.
-      newState = JSON.parse(newValue ?? '');
-    } catch (e) { /* fall through */ }
-    // Update the state with the new data.
-    setState(newState);
-  }, [state, initialValue]);
+  const onStorageChange = useCallback(
+    (event) => {
+      const { newValue } = event;
+      // Don't trigger storage events without a change.
+      const json = JSON.stringify(state);
+      if (newValue === json) {
+        return;
+      }
+      let newState = initialValue;
+      try {
+        // Attempt to parse.
+        newState = JSON.parse(newValue ?? "");
+      } catch (e) {
+        /* fall through */
+      }
+      // Update the state with the new data.
+      setState(newState);
+    },
+    [state, initialValue]
+  );
 
   // Listen for changes to the stored value for `stateKey`.
   useStorageEffect(store, stateKey, onStorageChange);
 
   // Return value matches the signature used on `useState`
   return [state, setState];
-}
-
+};
 
 /**
  * Like `useState`, but the state is kept in sessionStorage as JSON
@@ -81,9 +91,8 @@ export const useStorage = (store, stateKey, defaultValue) => {
  *  pre-existing data
  * @returns state and setter
  */
-export const useSessionStorage = (storageKey, defaultValue) => (
-  useStorage(sessionStorage, storageKey, defaultValue)
-);
+export const useSessionStorage = (storageKey, defaultValue) =>
+  useStorage(sessionStorage, storageKey, defaultValue);
 
 /**
  * Like `useState`, but the state is kept in localStorage as JSON
@@ -92,6 +101,5 @@ export const useSessionStorage = (storageKey, defaultValue) => (
  *  pre-existing data
  * @returns state and setter
  */
-export const useLocalStorage = (storageKey, defaultValue) => (
-  useStorage(localStorage, storageKey, defaultValue)
-);
+export const useLocalStorage = (storageKey, defaultValue) =>
+  useStorage(localStorage, storageKey, defaultValue);

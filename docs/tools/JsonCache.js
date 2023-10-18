@@ -15,8 +15,12 @@ export default class JsonCache {
   }
 
   async get(name) {
-    if (name in this.#resources) return this.#resources[name];
-    this.#resources[name] = this.#fetch(name).then((text) => this.#parseJson(text));
+    if (name in this.#resources) {
+      return this.#resources[name];
+    }
+    this.#resources[name] = this.#fetch(name).then((text) =>
+      this.#parseJson(text)
+    );
     this.#resources[name].then((layout) => {
       this.#resources[name] = layout;
     });
@@ -24,25 +28,32 @@ export default class JsonCache {
   }
 
   async #parseJson(text) {
-    return this.constructor.#hydrate(JSON.parse(
-      text,
-      (key, value) => this.#revive(key, value),
-    ));
+    return JsonCache.#hydrate(
+      JSON.parse(text, (key, value) => this.#revive(key, value))
+    );
   }
 
   static async #hydrate(value) {
-    if (value === null) return value;
-    if (typeof value !== 'object') return value;
-    if (typeof value?.then === 'function') return value;
+    if (value === null) {
+      return value;
+    }
+    if (typeof value !== "object") {
+      return value;
+    }
+    if (typeof value?.then === "function") {
+      return value;
+    }
     if (Array.isArray(value)) {
       return Promise.all(value.map((v) => this.#hydrate(v)));
     }
     const result = {};
-    await Promise.all(Object.keys(value).map((key) => (
-      this.#hydrate(value[key]).then((r) => {
-        result[key] = r;
-      })
-    )));
+    await Promise.all(
+      Object.keys(value).map((key) =>
+        this.#hydrate(value[key]).then((r) => {
+          result[key] = r;
+        })
+      )
+    );
     return result;
   }
 

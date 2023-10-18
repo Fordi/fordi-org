@@ -23,11 +23,13 @@ export const onCall = (obj, member, listener) => {
 
 export const offCall = (obj, member, listener) => {
   const props = callMap.get(obj[member]);
-  if (!props) return;
+  if (!props) {
+    return;
+  }
   props.listeners.delete(listener);
   if (props.listeners.size === 0) {
-    callMap.remove(props.proxy);
-    callMap.remove(props.original);
+    callMap.delete(props.proxy);
+    callMap.delete(props.original);
     props.context[props.name] = props.original;
   }
 };

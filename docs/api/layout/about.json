@@ -1,32 +1,58 @@
-[[
-  "About",
-  {
-    "title": "Bryan elliott",
-    "article": [
-      {
-        "title": { "i18n": "historyTitle" },
-        "content": [
-          { "i18n": "preEducation" },
-          { "i18n": "school" },
-          { "i18n": "clientWork" },
-          { "i18n": "comcast" }
-        ]
-      },
-      {
-        "title": { "i18n": "skillsTitle" },
-        "content": [
-          { "i18n": "ecosystem" },
-          { "i18n": "flexibility" },
-          { "i18n": "technology" }
-        ]
-      },
-      {
-        "title": { "i18n": "futureTitle" },
-        "content": [
-          { "i18n": "ambitions" },
-          { "i18n": "relationship" }
-        ]
-      }
-    ]
-  }
-]]
+[
+  [
+    "About",
+    {
+      "title": "Bryan elliott",
+      "article": [
+        {
+          "title": {
+            "i18n": "historyTitle"
+          },
+          "content": [
+            {
+              "i18n": "preEducation"
+            },
+            {
+              "i18n": "school"
+            },
+            {
+              "i18n": "clientWork"
+            },
+            {
+              "i18n": "current"
+            }
+          ]
+        },
+        {
+          "title": {
+            "i18n": "skillsTitle"
+          },
+          "content": [
+            {
+              "i18n": "ecosystem"
+            },
+            {
+              "i18n": "flexibility"
+            },
+            {
+              "i18n": "technology"
+            }
+          ]
+        },
+        {
+          "title": {
+            "i18n": "futureTitle"
+          },
+          "content": [
+            {
+              "i18n": "ambitions"
+            },
+            {
+              "i18n": "relationship"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+]
