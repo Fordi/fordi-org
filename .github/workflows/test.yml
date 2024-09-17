@@ -4,13 +4,13 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    if: ${{ always() == false }}
     steps:
       - run: echo "job1"
 
   job2:
     runs-on: ubuntu-latest
     needs: [job1]
+    if: ${{ always() == false }}
     steps:
       - run: echo "job2"
 
