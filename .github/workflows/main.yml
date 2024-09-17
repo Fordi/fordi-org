@@ -65,10 +65,15 @@ jobs:
           name: word-resume
           path: docs/res
       - name: Amend last commit to include docx update
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          git checkout -b "build/${{ github.ref }}-${{ github.run_number }}"
           git add docs/res/Bryan_Elliott.docx
           git commit -m "Automatic Word resume update"
-          git push --force -u origin "${{ github.ref }}"
+          git push --force -u origin "build/${{ github.ref }}-${{ github.run_number }}"
+          gh pr create -t "Automatic Word resume update" -l "maint" -B "${{ github.ref }}" -b "Generated via workflow"
+
 
   deploy_to_staging:
     needs: commit_docs
