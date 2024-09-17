@@ -1,11 +1,19 @@
-name: Update resume docx from md
+name: Combined build/deploy
 on:
   push:
-    branches: ['main']
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-
   check_docs:
+    if: ${{ endsWith(github.ref, '/main') }}
     runs-on: ubuntu-latest
     outputs:
       update_needed: ${{ steps.check.outputs.md_newer }}
@@ -38,8 +46,7 @@ jobs:
           path: docs/res/Bryan_Elliott.docx
 
   commit_docs:
-    needs: [build_docs, check_docs]
-    if: needs.check_docs.outputs.update_needed == 'yes'
+    needs: build_docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -60,4 +67,47 @@ jobs:
         run: |
           git add docs/res/Bryan_Elliott.docx
           git commit -m "Automatic Word resume update"
-          git push --force -u origin "${{ github.ref_name }}"
+          git push --force -u origin "${{ github.ref }}"
+
+  deploy_to_staging:
+    needs: commit_docs
+    # also covered in branch protection rules; this prevents run failure
+    if: |
+      always() && (
+        github.ref == 'refs/heads/main'
+      )
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs/'
+      - id: deployment
+        uses: actions/deploy-pages@v4
+      - run: echo "Dry run of staging deploy"
+
+  deploy_to_production:
+    needs: commit_docs
+    # also covered in branch protection rules; this prevents run failure
+    if: |
+      always() && (
+        startsWith(github.ref, 'refs/tags/v')
+      )
+    runs-on: ubuntu-latest
+    environment: Dreamhost
+    steps:
+      - uses: actions/checkout@master
+      - name: Secure Copy
+        uses: nogsantos/ssh-scp-deploy@v1.3.0
+        with:
+          src: ./docs/*
+          host: ${{ vars.SSH_HOST }}
+          remote: ${{ vars.SSH_DIR }}
+          port: ${{ vars.SSH_PORT }}
+          user: ${{ vars.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+      - run: echo "Dry run of prod deploy"
