@@ -73,6 +73,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: commit_docs
     if: ${{ always() }}
+    steps: []
 
   deploy_to_staging:
     needs: build_complete
