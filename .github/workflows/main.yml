@@ -69,19 +69,13 @@ jobs:
           git commit -m "Automatic Word resume update"
           git push --force -u origin "${{ github.ref }}"
 
-  build_complete:
-    runs-on: ubuntu-latest
-    needs: commit_docs
-    if: ${{ always() }}
-    steps:
-      - run: echo "Build complete"
-      - run: echo "ref ${{ github.ref }}"
-      - run: echo "deploy_to_staging ${{ toJson(endsWith(github.ref, '/main') || endsWith(github.ref, '/integrate-workflows')) }}"
-      - run: echo "deploy_to_production  ${{ toJson(startsWith(github.ref, 'refs/v') || endsWith(github.ref, '/integrate-workflows')) }}"
-
   deploy_to_staging:
-    needs: build_complete
-    if: ${{ endsWith(github.ref, '/main') || endsWith(github.ref, '/integrate-workflows') }}
+    needs: commit_docs
+    if: |
+      always() && (
+        endsWith(github.ref, '/main')
+        || endsWith(github.ref, '/integrate-workflows')
+      )
     environment:
       name: github-pages
       # url: ${{ steps.deployment.outputs.page_url }}
@@ -97,8 +91,12 @@ jobs:
       - run: echo "Dry run of staging deploy"
 
   deploy_to_production:
-    needs: build_complete
-    if: ${{ startsWith(github.ref, 'refs/v') || endsWith(github.ref, '/integrate-workflows') }}
+    needs: commit_docs
+    if: |
+      always() && (
+        startsWith(github.ref, 'refs/v')
+        || endsWith(github.ref, '/integrate-workflows')
+      )
     runs-on: ubuntu-latest
     environment: Dreamhost
     steps:
