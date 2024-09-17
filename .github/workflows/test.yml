@@ -22,7 +22,7 @@ jobs:
 
   job4:
     runs-on: ubuntu-latest
-    needs: [job3]
+    needs: [job1, job2, job3]
     if: ${{ always() }}
     steps:
       - run: echo "job4"
