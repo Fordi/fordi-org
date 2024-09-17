@@ -1,7 +1,7 @@
-My portfolio site
+# My portfolio site
 
-Staging: [fordi.github.io/fordi-org](https://fordi.github.io/fordi-org)
-Production: [fordi.org](https://fordi.org)
+- Staging: [fordi.github.io/fordi-org](https://fordi.github.io/fordi-org)
+- Production: [fordi.org](https://fordi.org)
 
 ### Requirements
 
