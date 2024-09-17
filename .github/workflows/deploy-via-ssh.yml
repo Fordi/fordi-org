@@ -1,4 +1,4 @@
-name: Deploy to Dreamhost
+name: Deploy to Dreamhost (prod)
 
 concurrency:
   group: production
@@ -10,7 +10,7 @@ on:
       - v*
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     environment: Dreamhost
     steps:

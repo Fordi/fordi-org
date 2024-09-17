@@ -36,7 +36,7 @@ export const useStorage = (store, stateKey, defaultValue) => {
     if (stored) {
       try {
         return JSON.parse(stored ?? "");
-      } catch (e) {
+      } catch {
         // fall through
       }
     }
@@ -68,7 +68,7 @@ export const useStorage = (store, stateKey, defaultValue) => {
       try {
         // Attempt to parse.
         newState = JSON.parse(newValue ?? "");
-      } catch (e) {
+      } catch {
         /* fall through */
       }
       // Update the state with the new data.

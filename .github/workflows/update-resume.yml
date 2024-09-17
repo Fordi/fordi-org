@@ -1,0 +1,63 @@
+name: Update resume docx from md
+on:
+  push:
+    branches: ['main']
+
+jobs:
+
+  check_docs:
+    runs-on: ubuntu-latest
+    outputs:
+      update_needed: ${{ steps.check.outputs.md_newer }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: check
+        run: |
+          SRC="$(git log -n 1 --format='%ct' -- docs/res/Bryan_Elliott.md)"
+          DEST="$(git log -n 1 --format='%ct' -- docs/res/Bryan_Elliott.docx)"
+          if [[ $SRC > $DEST ]]; then
+            echo "md_newer=yes" >> $GITHUB_OUTPUT
+            echo ".md is newer than .docx; scheduling update"
+          else
+            echo ".md is older than .docx; skipping"
+          fi
+
+  build_docs:
+    needs: check_docs
+    if: needs.check_docs.outputs.update_needed == 'yes'
+    runs-on: ubuntu-latest
+    container: pandoc/core
+    steps:
+      - uses: actions/checkout@v4
+      - run: pandoc docs/res/Bryan_Elliott.md -o docs/res/Bryan_Elliott.docx
+      - uses: actions/upload-artifact@v4
+        with:
+          name: word-resume
+          path: docs/res/Bryan_Elliott.docx
+
+  commit_docs:
+    needs: [build_docs, check_docs]
+    if: needs.check_docs.outputs.update_needed == 'yes'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          SRC="$(git log -n 1 --format='%ct' -- docs/res/Bryan_Elliott.md)"
+          DEST="$(git log -n 1 --format='%cN' -- docs/res/Bryan_Elliott.docx)"
+          echo "$SRC > $DEST" | bc || echo "NEEDS_UPDATE=yes" >> $GITHUB_ENV
+      - run: |
+          git config --global user.email "$(git log -n 1 --format='%cN' -- docs/res/Bryan_Elliott.md)"
+          git config --global user.name "$(git log -n 1 --format='%ce' -- docs/res/Bryan_Elliott.md)"
+      - uses: actions/download-artifact@v4
+        with:
+          name: word-resume
+          path: docs/res
+      - name: Amend last commit to include docx update
+        run: |
+          git add docs/res/Bryan_Elliott.docx
+          git commit -m "Automatic Word resume update"
+          git push --force -u origin "${{ github.ref_name }}"

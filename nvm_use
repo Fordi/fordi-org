@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 NODE_VER="$(cat .nvmrc)"
 if [[ -f "${HOME}/.nvm/nvm.sh" ]]; then
   # Normal *nix
