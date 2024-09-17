@@ -89,7 +89,6 @@ jobs:
           path: './docs/'
       - id: deployment
         uses: actions/deploy-pages@v4
-      - run: echo "Dry run of staging deploy"
 
   deploy_to_production:
     needs: commit_docs
@@ -111,4 +110,3 @@ jobs:
           port: ${{ vars.SSH_PORT }}
           user: ${{ vars.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-      - run: echo "Dry run of prod deploy"
