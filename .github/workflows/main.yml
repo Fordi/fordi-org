@@ -1,7 +1,8 @@
 name: Combined build/deploy
 on:
   push:
-
+    branches: [main]
+    tags: [v*]
 permissions:
   contents: read
   pages: write
