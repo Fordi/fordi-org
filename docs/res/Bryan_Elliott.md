@@ -64,7 +64,15 @@ Phone: +1-267-475-7721
 
 ## Specific Experience
 
-### [Cesium GS, Inc.](https://github.com/CesiumGS) - 08/2023 to Present
+### [Bentley Systems](https://bentley.com) - 09/2024 to Present
+
+- Part of the Cesium Infrastructure squad
+- Continuous Integration
+- Github Actions
+- Security scanning and static analysis
+- Deployment automation
+
+### [Cesium GS, Inc.](https://github.com/CesiumGS) - 08/2023 to 08/2024
 
 #### Senior Software Developer
 
