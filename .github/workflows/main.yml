@@ -75,6 +75,9 @@ jobs:
     if: ${{ always() }}
     steps:
       - run: echo "Build complete"
+      - run: echo "ref ${{ github.ref }}"
+      - run: echo "deploy_to_staging ${{ toJson(endsWith(github.ref, '/main') || endsWith(github.ref, '/integrate-workflows')) }}"
+      - run: echo "deploy_to_production  ${{ toJson(startsWith(github.ref, 'refs/v') || endsWith(github.ref, '/integrate-workflows')) }}"
 
   deploy_to_staging:
     needs: build_complete
