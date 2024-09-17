@@ -69,12 +69,17 @@ jobs:
           git commit -m "Automatic Word resume update"
           git push --force -u origin "${{ github.ref }}"
 
-  deploy_to_staging:
+  build_complete:
+    runs-on: ubuntu-latest
     needs: commit_docs
-    if: ${{ always() && (endsWith(github.ref, '/main') || endsWith(github.ref, '/integrate-workflows')) }}
+    if: ${{ always() }}
+
+  deploy_to_staging:
+    needs: build_complete
+    if: ${{ endsWith(github.ref, '/main') || endsWith(github.ref, '/integrate-workflows') }}
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      # url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -87,7 +92,7 @@ jobs:
       - run: echo "Dry run of staging deploy"
 
   deploy_to_production:
-    needs: commit_docs
+    needs: build_complete
     if: ${{ startsWith(github.ref, 'refs/v') || endsWith(github.ref, '/integrate-workflows') }}
     runs-on: ubuntu-latest
     environment: Dreamhost
