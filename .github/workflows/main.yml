@@ -3,10 +3,12 @@ on:
   push:
     branches: [main]
     tags: [v*]
+
 permissions:
   contents: write
   pages: write
   id-token: write
+  pull-requests: write
 
 concurrency:
   group: ${{ github.ref }}
