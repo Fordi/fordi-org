@@ -73,7 +73,8 @@ jobs:
           git commit -m "Automatic Word resume update"
           git push --force -u origin "build/${{ github.ref }}-${{ github.run_number }}"
           gh pr create -t "Automatic Word resume update" -l "maint" -B "${{ github.ref }}" -b "Generated via workflow"
-
+          PR="$(gh pr list -H "build/${{ github.ref }}-${{ github.run_number }}" --json number --jq '.[].number')"
+          gh pr merge "$PR" --squash --admin
 
   deploy_to_staging:
     needs: commit_docs
