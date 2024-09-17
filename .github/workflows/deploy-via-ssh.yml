@@ -1,5 +1,9 @@
 name: Deploy to Dreamhost
 
+concurrency:
+  group: production
+  cancel-in-progress: true
+
 on:
   push:
     tags:
@@ -8,15 +12,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: Dreamhost
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
       - name: Secure Copy
         uses: nogsantos/ssh-scp-deploy@v1.3.0
         with:
           src: ./docs/*
-          host: ${{ secrets.SSH_HOST }}
-          remote: ${{ secrets.SSH_DIR }}
-          port: ${{ secrets.SSH_PORT }}
-          user: ${{ secrets.SSH_USER }}
+          host: ${{ vars.SSH_HOST }}
+          remote: ${{ vars.SSH_DIR }}
+          port: ${{ vars.SSH_PORT }}
+          user: ${{ vars.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
