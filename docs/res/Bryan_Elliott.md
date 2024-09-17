@@ -19,6 +19,7 @@ Phone: +1-267-475-7721
 - Informaton architecture
 - Sofware and systems development
 - Content management system development
+- Continuous integration
 
 ### Languages
 

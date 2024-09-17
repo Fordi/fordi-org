@@ -1,4 +1,7 @@
-My portfolio site @ [fordi.org](https://fordi.org).
+My portfolio site
+
+Staging: [fordi.github.io/fordi-org](https://fordi.github.io/fordi-org)
+Production: [fordi.org](https://fordi.org)
 
 ### Requirements
 
@@ -20,15 +23,11 @@ $ npm i
 ### Running locally
 
 ```bash
-$ npm run src
+$ npm start
 ```
 
-### Building a production build
-```bash
-$ npm run build
-```
+### Rebuilding the Word resume from Markdown
 
-### Running a production build
 ```bash
-$ npm run dist
+$ npm run build:docs
 ```

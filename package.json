@@ -4,20 +4,19 @@
   "description": "Zero-build version of my portfolio site",
   "browser": "src/index.html",
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build:docs": "pandoc docs/res/Bryan_Elliott.md -o docs/res/Bryan_Elliott.docx",
+    "lint": "eslint"
   },
   "type": "module",
   "author": "Bryan Elliott <fordiman@gmail.com> (https://fordi.org)",
   "license": "ISC",
   "devDependencies": {
-    "chokidar": "^3.5.2",
-    "prettier": "^3.0.3",
-    "eslint": "^8.16.0",
-    "eslint-config-recommended": "^4.1.0",
-    "eslint-import-resolver-typescript": "^3.5.1",
-    "eslint-plugin-import": "^2.26.0",
-    "express": "^4.21.0",
-    "jsdoc": "^3.6.11",
-    "node-html-parser": "^6.1.10"
+    "chokidar": "^4.0.0",
+    "eslint": "^9.10.0",
+    "eslint-plugin-lit": "^1.15.0",
+    "express": "^4.18.2",
+    "jsdoc": "^4.0.3",
+    "prettier": "^3.3.3"
   }
 }
