@@ -18,4 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: [job2]
     steps:
-      - run: echo "job2"
+      - run: echo "job3"
+
+  job4:
+    runs-on: ubuntu-latest
+    needs: [job3]
+    if: ${{ always() }}
+    steps:
+      - run: echo "job4"
