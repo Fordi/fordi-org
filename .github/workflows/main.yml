@@ -88,7 +88,7 @@ jobs:
       - run: echo "Dry run of staging deploy"
 
   deploy_to_production:
-    needs: build_docs
+    needs: commit_docs
     if: ${{ startsWith(github.ref, 'refs/v') || endsWith(github.ref, '/integrate-workflows') }}
     runs-on: ubuntu-latest
     environment: Dreamhost
