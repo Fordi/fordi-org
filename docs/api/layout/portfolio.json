@@ -1,8 +1,11 @@
 [
   [
-    "Portfolio", {}, [
+    "Portfolio",
+    {},
+    [
       [
-        "Carousel", {
+        "Carousel",
+        {
           "className": [
             "Portfolio.styles.carousel"
           ]
@@ -14,7 +17,9 @@
               "href": "https://github.com/Fordi/fordi-org",
               "image": "Portfolio/portfolio.jpg",
               "altKey": "portfolioTitle",
-              "title": { "i18n": "portfolioTitle" },
+              "title": {
+                "i18n": "portfolioTitle"
+              },
               "flavorKey": "portfolio"
             }
           ],
@@ -26,8 +31,11 @@
               "alt": "Xfinity MyAccount",
               "title": {
                 "component": [
-                  "svg/XfinityLogo", {
-                    "style": { "marginTop": -18 },
+                  "svg/XfinityLogo",
+                  {
+                    "style": {
+                      "marginTop": -18
+                    },
                     "alt": "Xfinity MyAccount"
                   }
                 ]
@@ -46,7 +54,9 @@
                   "img",
                   {
                     "src": "Portfolio/RSuiteLogo.png",
-                    "style": { "marginTop": -22 },
+                    "style": {
+                      "marginTop": -22
+                    },
                     "alt": "RSuite CMS"
                   }
                 ]
@@ -65,7 +75,9 @@
                   "img",
                   {
                     "src": "Portfolio/toysrusLogo.png",
-                    "style": { "marginTop": -15 },
+                    "style": {
+                      "marginTop": -15
+                    },
                     "alt": "Toys'R'Us"
                   }
                 ]

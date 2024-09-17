@@ -117,10 +117,10 @@ Phone: +1-267-475-7721
 
 ### I-Site, Inc. - 11/2008 to 07/2009
 
-#### Web Developer (Contract)
+#### Web Developer
 
 - Developed advert sing sites for a number of clients using PHP (v5, OOP), Drupal, Flash
-- Developed the iGorilla app in Object ve C
+- Developed the iGorilla app in Objective C
 - Learned Google Maps API, Linux server admin, Apache config, jQuery
 
 ### Abacus Studios, Inc. - 05/2006 to 07/2009
