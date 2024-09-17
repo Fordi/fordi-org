@@ -1,0 +1,21 @@
+name: Combined build/deploy scratchpad
+on:
+  push:
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    if: ${{ always() == false }}
+    steps:
+      - run: echo "job1"
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: [job1]
+    steps:
+      - run: echo "job2"
+
+  job3:
+    runs-on: ubuntu-latest
+    needs: [job2]
+    steps:
+      - run: echo "job2"
