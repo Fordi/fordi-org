@@ -3,9 +3,9 @@ import { useContext } from "preact/hooks";
 import createI18nContext from "createI18nContext";
 
 const I18N = createI18nContext({
-  config: await fetch("./api/i18n/config").then((r) => r.json()),
+  config: await fetch("./index/api/i18n/config").then((r) => r.json()),
   fetchLanguage: (language) =>
-    fetch(`./api/i18n/${language}`).then((r) => r.json()),
+    fetch(`./index/api/i18n/${language}`).then((r) => r.json()),
 });
 
 export const useI18n = () => useContext(I18N);

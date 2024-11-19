@@ -11,26 +11,26 @@
           "preact-router": "https://cdn.jsdelivr.net/npm/preact-router/dist/preact-router.module.js",
           "preact-router/match": "https://cdn.jsdelivr.net/npm/preact-router/match/index.module.js",
           "htm": "https://unpkg.com/htm/src/index.mjs",
-          "classes": "./tools/classes.js",
-          "createI18nContext": "./tools/createI18nContext.js",
-          "css": "./tools/css.js",
-          "html": "./tools/html.js",
-          "importFont": "./tools/importFont.js",
-          "isThenable": "./tools/isThenable.js",
-          "JsonCache": "./tools/JsonCache.js",
-          "Layout": "./tools/Layout/index.js",
-          "ModuleCache": "./tools/ModuleCache.js",
-          "useStorage": "./tools/useStorage.js",
-          "useUrl": "./tools/useUrl.js"
+          "classes": "./index/tools/classes.js",
+          "createI18nContext": "./index/tools/createI18nContext.js",
+          "css": "./index/tools/css.js",
+          "html": "./index/tools/html.js",
+          "importFont": "./index/tools/importFont.js",
+          "isThenable": "./index/tools/isThenable.js",
+          "JsonCache": "./index/tools/JsonCache.js",
+          "Layout": "./index/tools/Layout/index.js",
+          "ModuleCache": "./index/tools/ModuleCache.js",
+          "useStorage": "./index/tools/useStorage.js",
+          "useUrl": "./index/tools/useUrl.js"
         }
       }
-    </script>    
+    </script>
     <style>
       html {background-color: #45565a;}
       body {opacity: 0; transition: opacity 1s;}
       body.loaded {opacity: 1;}
     </style>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index/index.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#eeaa44" />
@@ -38,11 +38,11 @@
       name="description"
       content="Portfolio site for Bryan Elliott"
     />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="index/favicon.ico" />
+    <link rel="icon" href="index/favicon.ico" />
     <title>Bryan Elliott</title>
     <script defer type="module">
-      import './index.js';
+      import './index/index.js';
       document.body.classList.add('loaded');
     </script>
   </head>

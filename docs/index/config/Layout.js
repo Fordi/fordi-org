@@ -16,7 +16,7 @@ const styles = css`
   }
 `;
 
-const fetchLayout = (layout) => fetch(`./api/layout/${layout}.json`).then(r => {
+const fetchLayout = (layout) => fetch(`./index/api/layout/${layout}.json`).then(r => {
     if (Math.floor(r.status / 100) !== 2) {
       if (r.status === 404) {
         throw Object.assign(new Error(), {

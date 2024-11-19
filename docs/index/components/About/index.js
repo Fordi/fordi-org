@@ -29,7 +29,7 @@ const styles = css`
 export default ({ title, article = [] }) => html`
   <div className=${styles.about}>
     <article>
-      <img className=${styles.headshot} src="./res/Bryan_Elliott.png" />
+      <img className=${styles.headshot} src="./index/res/Bryan_Elliott.png" />
       <h1>${title}</h1>
       ${article.map(
         ({ title: subtitle, content = [] }) => html`

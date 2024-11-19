@@ -73,9 +73,9 @@ export default ({ setLanguage }) => html`
       <//>
       <span className=${styles.resume}>
         ${"Resume: "}
-        <${ExtLink} className=${textButton} href="./res/Bryan_Elliott.docx">Word</ExtLink>
+        <${ExtLink} className=${textButton} href="./index/res/Bryan_Elliott.docx">Word</ExtLink>
         ${" | "}
-        <${ExtLink} className=${textButton} href="./res/Bryan_Elliott.md">Text</ExtLink>
+        <${ExtLink} className=${textButton} href="./index/res/Bryan_Elliott.md">Text</ExtLink>
       </span>
       <${NavLink} href="/about" className="button--text">
           About
@@ -83,11 +83,11 @@ export default ({ setLanguage }) => html`
     </div>
     <div className=${styles.language}>
       <button onClick=${() =>
-        setLanguage("en")}><img src="./res/en.png" alt="English" /></button>
+        setLanguage("en")}><img src="./index/res/en.png" alt="English" /></button>
       <button onClick=${() =>
-        setLanguage("es")}><img src="./res/es.png" alt="Español" /></button>
+        setLanguage("es")}><img src="./index/res/es.png" alt="Español" /></button>
       <button onClick=${() =>
-        setLanguage("jp")}><img src="./res/jp.png" alt="日本人" /></button>
+        setLanguage("jp")}><img src="./index/res/jp.png" alt="日本人" /></button>
     </div>
   </div>
 `;
