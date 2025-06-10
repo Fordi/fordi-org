@@ -68,8 +68,10 @@ Phone: +1-267-475-7721
 
 ### [Bentley Systems](https://bentley.com) - 09/2024 to Present
 
-- Part of the Cesium Infrastructure squad
+- Part of the Cesium Infrastructure and Cesium Ion squads
+- Geospatial data transforms
 - Continuous Integration
+- UI development
 - Github Actions
 - Security scanning and static analysis
 - Deployment automation

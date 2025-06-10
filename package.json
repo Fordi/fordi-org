@@ -5,7 +5,7 @@
   "browser": "src/index.html",
   "scripts": {
     "start": "node server/index.js",
-    "build:docs": "pandoc docs/res/Bryan_Elliott.md -o docs/res/Bryan_Elliott.docx",
+    "build:docs": "pandoc docs/index/res/Bryan_Elliott.md -o docs/index/res/Bryan_Elliott.docx",
     "lint": "eslint"
   },
   "type": "module",
