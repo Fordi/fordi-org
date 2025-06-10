@@ -2,9 +2,10 @@ import express from "express";
 import { createServer } from "http";
 import { readFile } from "fs/promises";
 import { resolve, dirname } from "path";
+import { fileURLToPath } from "url";
 
 const resApp = (n) =>
-  resolve(resolve(dirname(new URL(import.meta.url).pathname), ".."), n);
+  resolve(resolve(dirname(fileURLToPath(import.meta.url)), ".."), n);
 const { name } = JSON.parse(await readFile(resApp("package.json"), "utf8"));
 const staticRoot = resApp("docs");
 

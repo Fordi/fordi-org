@@ -61,7 +61,7 @@ export default ({ setLanguage }) => html`
   <div className=${styles.nav}>
     <img className=${
       styles.logo
-    } src="./res/fordi.png" alt="Personal logo" style=${{ height: 96 }} />
+    } src="./index/res/fordi.png" alt="Personal logo" style=${{ height: 96 }} />
     <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 40 141" width="40" height="141" className=${
       styles.callout
     }>

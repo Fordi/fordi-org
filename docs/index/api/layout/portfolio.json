@@ -15,7 +15,7 @@
             "Carousel.Item",
             {
               "href": "https://github.com/Fordi/fordi-org",
-              "image": "Portfolio/portfolio.jpg",
+              "image": "index/Portfolio/portfolio.jpg",
               "altKey": "portfolioTitle",
               "title": {
                 "i18n": "portfolioTitle"
@@ -27,7 +27,7 @@
             "Carousel.Item",
             {
               "href": "https://customer.xfinity.com",
-              "image": "Portfolio/xfinity.png",
+              "image": "index/Portfolio/xfinity.png",
               "alt": "Xfinity MyAccount",
               "title": {
                 "component": [
@@ -47,13 +47,13 @@
             "Carousel.Item",
             {
               "href": "https://www.orbistechnologies.com/rsuite",
-              "image": "Portfolio/rsuite.png",
+              "image": "index/Portfolio/rsuite.png",
               "alt": "RSuite CMS",
               "title": {
                 "component": [
                   "img",
                   {
-                    "src": "Portfolio/RSuiteLogo.png",
+                    "src": "index/Portfolio/RSuiteLogo.png",
                     "style": {
                       "marginTop": -22
                     },
@@ -68,13 +68,13 @@
             "Carousel.Item",
             {
               "href": "https://toysrus.com",
-              "image": "Portfolio/toysrus.jpg",
+              "image": "index/Portfolio/toysrus.jpg",
               "alt": "Toys'R'Us",
               "title": {
                 "component": [
                   "img",
                   {
-                    "src": "Portfolio/toysrusLogo.png",
+                    "src": "index/Portfolio/toysrusLogo.png",
                     "style": {
                       "marginTop": -15
                     },
@@ -89,7 +89,7 @@
             "Carousel.Item",
             {
               "href": "https://muppet.fandom.com/wiki/The_Muppet_Whatnot_Workshop",
-              "image": "Portfolio/fao.jpg",
+              "image": "index/Portfolio/fao.jpg",
               "title": "Muppet Whatnot Workshop",
               "alt": "Muppet Whatnot Workshop",
               "flavorKey": "portfolioFAO"
@@ -99,7 +99,7 @@
             "Carousel.Item",
             {
               "href": "https://en.wikipedia.org/wiki/Vectrix",
-              "image": "Portfolio/vectrix.jpg",
+              "image": "index/Portfolio/vectrix.jpg",
               "title": "Vectrix Tools",
               "alt": "Vectrix Tools",
               "flavorKey": "portfolioVectrix"
