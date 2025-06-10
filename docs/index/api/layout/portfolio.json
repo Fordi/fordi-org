@@ -26,6 +26,26 @@
           [
             "Carousel.Item",
             {
+              "href": "https://ion.cesium.com/",
+              "image": "index/Portfolio/cesium.png",
+              "altKey": "Cesium",
+              "title": {
+                "component": [
+                  "svg/CesiumLogo",
+                  {
+                    "style": {
+                      "marginTop": -18
+                    },
+                    "alt": "Cesium"
+                  }
+                ]
+              },
+              "flavorKey": "portfolioCesium"
+            }
+          ],
+          [
+            "Carousel.Item",
+            {
               "href": "https://customer.xfinity.com",
               "image": "index/Portfolio/xfinity.png",
               "alt": "Xfinity MyAccount",
