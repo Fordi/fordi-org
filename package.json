@@ -1,6 +1,6 @@
 {
   "name": "fordi-org",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Zero-build version of my portfolio site",
   "browser": "src/index.html",
   "scripts": {
