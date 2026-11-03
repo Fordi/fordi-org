@@ -1,11 +1,11 @@
 import { render } from "preact";
 import html from "html";
 import { LayoutRouter } from "Layout";
-import Layout from "./config/Layout.js";
-import Loading from "./Loading.js";
+import Shell from "./app/Shell.js";
+import Loading from "./components/Loading/index.js";
 
 const Index = () => html`
-  <${Layout}>
+  <${Shell}>
     <${LayoutRouter}
       index="/portfolio"
       Loading=${Loading}

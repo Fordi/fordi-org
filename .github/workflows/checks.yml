@@ -1,0 +1,27 @@
+name: Checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Lint and structure score
+        run: npm run check
+      - name: Generated files are up to date
+        run: |
+          npm run build:i18n
+          npm run build:blog
+          git add -N docs/index/api
+          git diff --exit-code -- docs/index/api || {
+            echo "::error::Generated files are stale. Run npm run build:i18n and npm run build:blog, then commit."
+            exit 1
+          }

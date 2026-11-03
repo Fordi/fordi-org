@@ -19,7 +19,10 @@
               "i18n": "clientWork"
             },
             {
-              "i18n": "current"
+              "i18n": "smart-construction"
+            },
+            {
+              "i18n": "ion"
             }
           ]
         },

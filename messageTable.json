@@ -1,15 +1,7 @@
 {
-  "languages": [
-    "en",
-    "es",
-    "jp"
-  ],
+  "languages": ["en", "es", "jp"],
   "messageTable": {
-    "historyTitle": [
-      "a brief history",
-      "una breve historia",
-      "簡単な歴史"
-    ],
+    "historyTitle": ["a brief history", "una breve historia", "簡単な歴史"],
     "preEducation": [
       "Bryan's first experience with programming was in second grade. Dad had just bought their first computer, and Bryan spend months poring over the GW Basic syntax manual, testing commands, breaking things, and wondering what a \"Syntax\" was.",
       "La primera experiencia de Bryan con la programación fue en segundo grado. Papá tenía acaba de comprar su primera computadora, y Bryan pasó meses estudiando el manual de sintaxis GW Basic, probando comandos, rompiendo cosas y preguntándose qué era una \"Sintaxis\".",
@@ -25,10 +17,15 @@
       "Desde entonces, ha trabajado independientemente para varios clientes en el área de Filadelfia, incluidos The Wharton School, Abacus Studios, Sevens and Sixes e I-SITE. Luego pasó dos años en TrueAction, Inc., creando la interfaz de usuario para clientes de comercio electrónico exigentes como Toys R Us. En RSI Content Solutions, creó la interfaz de usuario y gran parte del back-end para RSuite CMS versión 5. En Comcast, ayudó a realizar la transición de los grandes portales de pago y MyAccount de una aplicación monolítica Angular 1.4 a un conjunto de pequeñas aplicaciones React, luego ayudó a aprovechar Sitecore para el contenido del sitio.",
       "それ以来、ウォートン スクール、アバカス スタジオ、セブンズ アンド シックス、I-SITE など、フィラデルフィア地域の多くのクライアントをフリーランスとして担当してきました。 その後、TrueAction, Inc. で 2 年間、トイザらスなどの要求の厳しい e コマース クライアント向けの UI を構築しました。 RSI Content Solutions では、RSuite CMS バージョン 5 の UI とバックエンドの多くを作成しました。 Comcast では、大規模な MyAccount および支払いポータルをモノリシックな Angular 1.4 アプリから小規模な React アプリのスイートに移行するのを支援しました。 サイトのコンテンツに Sitecore を活用するのに役立ちました。"
     ],
-    "current": [
-      "At present, he's an engineer with CesiumGS, an open-source company that specializes in 3D geospatial solutions.  He's a senior software developer with their Smart Construction team, working with EARTHBRAIN and Komatsu to bring 3D visualizations and real-time data to earthworks projects.",
-      "Actualmente es ingeniero en CesiumGS, una empresa de código abierto que se especializa en soluciones geoespaciales 3D. Es desarrollador de software senior del equipo de Smart Construction y trabaja con EARTHBRAIN y Komatsu para llevar visualizaciones 3D y datos en tiempo real a proyectos de movimiento de tierras.",
-      "現在、彼は 3D 地理空間ソリューションを専門とするオープンソース企業 CesiumGS のエンジニアです。 彼はスマート コンストラクション チームの上級ソフトウェア開発者であり、EARTHBRAIN およびコマツと協力して 3D ビジュアライゼーションとリアルタイム データを土工プロジェクトに導入しています。"
+    "smart-construction": [
+      "In August 2023, he joined CesiumGS, an open-source company that specializes in 3D geospatial solutions. For his first year there, he was a senior software developer with their Smart Construction team, working with EARTHBRAIN and Komatsu to bring 3D visualizations and real-time data to earthworks projects.",
+      "En agosto de 2023 se unió a CesiumGS, una empresa de código abierto que se especializa en soluciones geoespaciales 3D. Durante su primer año allí, fue desarrollador de software senior del equipo de Smart Construction, trabajando con EARTHBRAIN y Komatsu para llevar visualizaciones 3D y datos en tiempo real a proyectos de movimiento de tierras.",
+      "2023 年 8 月、彼は 3D 地理空間ソリューションを専門とするオープンソース企業 CesiumGS に入社しました。 最初の 1 年間はスマート コンストラクション チームの上級ソフトウェア開発者として、EARTHBRAIN およびコマツと協力し、3D ビジュアライゼーションとリアルタイム データを土工プロジェクトに導入しました。"
+    ],
+    "ion": [
+      "After Cesium was acquired by Bentley Systems in 2024, he moved to the Cesium ion team. There, he focuses on geospatial data processing - particularly OpenStreetMap data - along with project maintenance (staying ahead of package vulnerabilities, and keeping CI and Docker infrastructure healthy), feature work, and developer experience: building the scripts and tools that let his team move faster.",
+      "Tras la adquisición de Cesium por Bentley Systems en 2024, pasó al equipo de Cesium ion. Allí se dedica al procesamiento de datos geoespaciales, en particular datos de OpenStreetMap, además del mantenimiento del proyecto (adelantarse a las vulnerabilidades de los paquetes y mantener en buen estado la infraestructura de CI y Docker), el desarrollo de nuevas funciones y la experiencia de los desarrolladores: crear los scripts y herramientas que permiten a su equipo avanzar más rápido.",
+      "2024 年に Cesium が Bentley Systems に買収された後、彼は Cesium ion チームに移りました。 そこでは、特に OpenStreetMap データを中心とした地理空間データ処理に加え、プロジェクトのメンテナンス (パッケージの脆弱性への先回りした対応や、CI および Docker インフラの健全な維持)、機能開発、そして開発者体験の向上 (チームがより速く動けるようにするスクリプトやツールの作成) に注力しています。"
     ],
     "skillsTitle": [
       "a particular set of skills",
@@ -50,11 +47,7 @@
       "CSS? SCSS? ¿MENOS? Lo ha dominado. ¿Reaccionar? ¿Angular? ¿Ascua? Bryan puede trabajar en ello. ¿Rieles? ¿Primavera? No importa; lo ha hecho antes. ¿Nuevas transformaciones? ¿Análisis? Los verdaderos programadores no le temen a las matemáticas.",
       "CSS? ＳＣＳＳ？ 少ない？ 彼はそれをマスターしました。 反応しますか？ 角ばった？ 残り火？ ブライアンはそれに取り組むことができます。 レール？ 春？ 関係ない; 彼は以前にそれをやったことがあります。 斬新な変身？ 分析? 本物のプログラマーは数学を恐れません。"
     ],
-    "futureTitle": [
-      "future targets",
-      "objetivos futuros",
-      "未来目標"
-    ],
+    "futureTitle": ["future targets", "objetivos futuros", "未来目標"],
     "ambitions": [
       "Bryan's ambitions are relatively simple. He would like to work on innovative software, and make it a pleasure for others to work on - \"others\" being a term that includes himself in six months: maintenance can be as challenging as development, and good test-driven development, coupled with good documentation, can ease that pain.",
       "Las ambiciones de Bryan son relativamente simples. Le gustaría trabajar en software innovador,  y hacer que sea un placer para otros trabajar - \"otros\" es un término que incluye  él mismo en seis meses: el mantenimiento puede ser tan desafiante como el desarrollo, y  El desarrollo basado en pruebas, junto con una buena documentación, puede aliviar ese dolor.",
@@ -65,20 +58,16 @@
       "Más allá de eso, le gustaría tener una relación con una empresa con objetivos claros,  excelente gestión, y un equipo de desarrollo abierto a nuevas ideas y  tecnologías.",
       "その後は、明確な目標、優れた経営陣、新しいアイデアやテクノロジーを受け入れる開発チームを持つ会社との関係を築きたいと考えています。"
     ],
-    "portfolioTitle": [
-      "You Are Here",
-      "Estás Aquí",
-      "君はここにいる"
-    ],
+    "portfolioTitle": ["You Are Here", "Estás Aquí", "君はここにいる"],
     "portfolio": [
       "Bryan enjoys playing with innovative ways of building things, usually starting with this page.  Visit the repo to see how he wrote this one.",
       "Bryan disfruta jugando con formas innovadoras de construir cosas, generalmente comenzando\n   con esta página. Visite el repositorio para ver cómo escribió este usando ",
       "ブライアンは、物事を構築する革新的な方法で遊ぶことを楽しんでおり、通常はこのページから始めます。 彼がこれをどのように書いたかを見るには、リポジトリにアクセスしてください。"
     ],
     "portfolioCesium": [
-      "TBD",
-      "",
-      ""
+      "At Cesium (later Bentley), Bryan is helping to shape the future of open-source 3D geospatial technology - crafting web experiences, streamlining infrastructure, and supporting geospatial software like Smart Construction and Cesium ion.",
+      "En Cesium (más tarde Bentley), Bryan está ayudando a dar forma al futuro de la tecnología geoespacial 3D de código abierto: crea experiencias web, optimiza la infraestructura y respalda software geoespacial como Smart Construction y Cesium ion.",
+      "Cesium (後の Bentley) において、Bryan は、Web エクスペリエンスの作成、インフラストラクチャの合理化、Smart Construction や Cesium ion などの地理空間ソフトウェアのサポートなど、オープンソースの 3D 地理空間テクノロジの将来を形作ることに尽力しています。"
     ],
     "portfolioComcast": [
       "Bryan helped to maintain Comcast's various customer portals, working in React and Angular, and picking up Ruby and Rails.  The job was to prevent downtime, ensure the security of transactions and personal information, and to create the best possible customer experience by working together with several upstream API teams to implement new features.",
@@ -104,6 +93,23 @@
       "Whether calculating your gasoline savings with a Vectrix scooter versus other vehicles, or determining how far you can go on a full charge, Bryan's code enables you.",
       "Ya sea para calcular sus ahorros de gasolina con un scooter Vectrix frente a otros  vehículos, o determinar qué tan lejos puede llegar con una carga completa, el código de Bryan le permite.",
       "Vectrix スクーターと他の車両でのガソリン節約量を計算したり、フル充電でどのくらいの距離を走行できるかを判断したりする場合でも、Bryan のコードを使用するとそれが可能になります。"
+    ],
+    "blogTitle": ["blog", "blog", "ブログ"],
+    "blogEmpty": [
+      "Nothing here yet. Check back soon.",
+      "Todavía no hay nada aquí. Vuelve pronto.",
+      "まだ何もありません。また後でお越しください。"
+    ],
+    "blogBack": ["← all posts", "← todas las entradas", "← すべての記事"],
+    "blogUntranslated": [
+      "This post isn't available in your language yet.",
+      "Esta entrada aún no está disponible en tu idioma.",
+      "この記事はまだお使いの言語では読めません。"
+    ],
+    "blogLoadError": [
+      "This post couldn't be loaded.",
+      "No se pudo cargar esta entrada.",
+      "この記事を読み込めませんでした。"
     ]
   }
 }

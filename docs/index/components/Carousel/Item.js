@@ -3,7 +3,7 @@ import css from 'css';
 
 import ExtLink from '../ExtLink/index.js';
 
-import { useI18n } from '../../config/I18n.js';
+import { useI18n } from '../../app/I18n.js';
 
 const styles = css`
   .item {

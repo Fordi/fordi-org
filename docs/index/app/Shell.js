@@ -3,7 +3,7 @@ import css from 'css';
 import { LayoutContext } from 'Layout';
 import { useLocalStorage } from 'useStorage';
 
-import Nav from './Nav.js';
+import Nav from '../components/Nav/index.js';
 import I18n, { reviveI18n } from './I18n.js';
 
 const styles = css`

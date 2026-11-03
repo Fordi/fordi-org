@@ -1,8 +1,9 @@
 import html from "html";
 import css from "css";
+import { useEffect, useState } from "preact/hooks";
 
-import ExtLink from "../components/ExtLink/index.js";
-import NavLink from "../components/NavLink/index.js";
+import ExtLink from "../ExtLink/index.js";
+import NavLink from "../NavLink/index.js";
 
 const styles = css`
   .nav {
@@ -57,11 +58,28 @@ const styles = css`
 
 const textButton = styles.button.and("button--text");
 
-export default ({ setLanguage }) => html`
+// Slug of the newest post; blog.json is generated newest-first.
+const latestPost = fetch("./index/api/layout/blog.json")
+  .then((r) => (r.ok ? r.json() : null))
+  .then((layout) => layout?.[0]?.[1]?.posts?.[0]?.slug)
+  .catch(() => undefined);
+
+// Link to the newest post, falling back to the post index.
+const useBlogHref = () => {
+  const [href, setHref] = useState("/blog");
+  useEffect(() => {
+    latestPost.then((slug) => slug && setHref(`/blog/${slug}`));
+  }, []);
+  return href;
+};
+
+export default ({ setLanguage }) => {
+  const blogHref = useBlogHref();
+  return html`
   <div className=${styles.nav}>
     <img className=${
       styles.logo
-    } src="./index/res/fordi.png" alt="Personal logo" style=${{ height: 96 }} />
+    } src="./index/img/fordi.png" alt="Personal logo" style=${{ height: 96 }} />
     <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 40 141" width="40" height="141" className=${
       styles.callout
     }>
@@ -80,14 +98,18 @@ export default ({ setLanguage }) => html`
       <${NavLink} href="/about" className="button--text">
           About
       <//>
+      <${NavLink} href=${blogHref} className="button--text">
+          Blog
+      <//>
     </div>
     <div className=${styles.language}>
       <button onClick=${() =>
-        setLanguage("en")}><img src="./index/res/en.png" alt="English" /></button>
+        setLanguage("en")}><img src="./index/img/flags/en.png" alt="English" /></button>
       <button onClick=${() =>
-        setLanguage("es")}><img src="./index/res/es.png" alt="Español" /></button>
+        setLanguage("es")}><img src="./index/img/flags/es.png" alt="Español" /></button>
       <button onClick=${() =>
-        setLanguage("jp")}><img src="./index/res/jp.png" alt="日本人" /></button>
+        setLanguage("jp")}><img src="./index/img/flags/jp.png" alt="日本人" /></button>
     </div>
   </div>
 `;
+};

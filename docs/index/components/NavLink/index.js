@@ -1,7 +1,7 @@
 import html from 'html';
 import css from 'css';
 import classes from 'classes';
-import useUrl from '../../tools/useUrl.js';
+import useUrl from '../../hooks/useUrl.js';
 
 const styles = css`
   .active {

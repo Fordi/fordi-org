@@ -2,21 +2,23 @@
   "name": "fordi-org",
   "version": "1.0.1",
   "description": "Zero-build version of my portfolio site",
-  "browser": "src/index.html",
   "scripts": {
     "start": "node server/index.js",
-    "build:docs": "pandoc docs/index/res/Bryan_Elliott.md -o docs/index/res/Bryan_Elliott.docx",
+    "build:blog": "node scripts/build-blog.js",
+    "build:i18n": "node scripts/build-i18n.js",
+    "build:resume": "pandoc docs/index/res/Bryan_Elliott.md -o docs/index/res/Bryan_Elliott.docx",
+    "check": "eslint && node scripts/check-structure.js",
     "lint": "eslint"
   },
   "type": "module",
   "author": "Bryan Elliott <fordiman@gmail.com> (https://fordi.org)",
   "license": "ISC",
   "devDependencies": {
-    "chokidar": "^4.0.3",
     "eslint": "^9.39.5",
     "eslint-plugin-lit": "^1.15.0",
     "express": "^4.22.2",
-    "jsdoc": "^4.0.5",
+    "highlight.js": "^11.12.0",
+    "markdown-it": "^14.3.3",
     "prettier": "^3.9.10"
   }
 }

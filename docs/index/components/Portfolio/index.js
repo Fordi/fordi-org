@@ -3,7 +3,7 @@ import css from 'css';
 
 export const styles = css`
   .portfolio {
-    background: url(Portfolio/denim-velvet.jpg);
+    background: url(index/img/portfolio/denim-velvet.jpg);
     width: 100%;
     height: 100%;
   }

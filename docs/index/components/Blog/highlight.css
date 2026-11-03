@@ -1,0 +1,71 @@
+/*
+ * Code colors for blog posts. scripts/build-blog.js adds the hljs-* classes
+ * at build time. These are plain (not css``-scoped) class names because the
+ * markup is generated outside the component. Colors follow the site palette:
+ * cyan #99e8ff and amber #eeaa44 on the #222 page.
+ */
+.hljs {
+  color: #e6e6e6;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #8a9ca1;
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-doctag {
+  color: #eeaa44;
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-symbol,
+.hljs-template-tag {
+  color: #b8e08a;
+}
+.hljs-number,
+.hljs-built_in,
+.hljs-type,
+.hljs-variable,
+.hljs-template-variable {
+  color: #c9b2ff;
+}
+.hljs-title,
+.hljs-name,
+.hljs-attr,
+.hljs-attribute,
+.hljs-property,
+.hljs-selector-class,
+.hljs-selector-id {
+  color: #99e8ff;
+}
+.hljs-meta,
+.hljs-bullet,
+.hljs-link {
+  color: #8fbfcc;
+}
+.hljs-punctuation,
+.hljs-tag {
+  color: #b0b8ba;
+}
+.hljs-addition,
+.hljs-deletion {
+  display: inline-block;
+  min-width: 100%;
+}
+.hljs-addition {
+  color: #b8e08a;
+  background: rgba(184, 224, 138, 0.12);
+}
+.hljs-deletion {
+  color: #ff9e8f;
+  background: rgba(255, 158, 143, 0.12);
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: bold;
+}

@@ -45,7 +45,7 @@ export default ({ config: { languages, keys }, fetchLanguage }) => {
     return createElement(
       Provider,
       {
-        value: (strings, ...subs) => {
+        value: Object.assign((strings, ...subs) => {
           const id = typeof strings === 'string' ? strings : strings.raw.join('%%');
           if (messageTable === null) {
             return createElement(
@@ -66,7 +66,7 @@ export default ({ config: { languages, keys }, fetchLanguage }) => {
 
           }
           return String.raw({ raw: message.split('%%') }, ...subs);
-        }
+        }, { language })
       },
       children
     );

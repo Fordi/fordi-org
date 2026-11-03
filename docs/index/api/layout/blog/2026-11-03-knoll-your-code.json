@@ -1,0 +1,15 @@
+[
+  [
+    "Blog.Post",
+    {
+      "slug": "2026-11-03-knoll-your-code",
+      "date": "2026-11-03",
+      "title": {
+        "en": "Knoll your Code"
+      },
+      "languages": [
+        "en"
+      ]
+    }
+  ]
+]

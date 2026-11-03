@@ -1,10 +1,9 @@
 import { createContext, createElement } from "preact";
-import ModuleCache from "../ModuleCache.js";
-import JsonCache from "../JsonCache.js";
+import ModuleCache from "./ModuleCache.js";
+import JsonCache from "./JsonCache.js";
 import createClassReviver from "./createClassReviver.js";
 import createComponentReviver from "./createComponentReviver.js";
 import { useState, useEffect, useContext } from "preact/hooks";
-import isThenable from "../isThenable.js";
 
 const Context = createContext({});
 
@@ -13,25 +12,29 @@ const isHtmlTag = (c) =>
 
 export const LayoutComponent = ({ componentName, children, ...props }) => {
   const { moduleCache } = useContext(Context);
-  const [Component, setComponent] = useState(null);
+  // Remember which name the loaded component belongs to: when the layout
+  // changes, this instance is reused, and the old component must never be
+  // rendered with the new layout's props.
+  const [loaded, setLoaded] = useState({ name: null, Component: null });
 
   useEffect(() => {
     if (isHtmlTag(componentName)) {
-      setComponent(componentName);
-    } else {
-      setComponent(() => moduleCache.getExport(componentName));
+      setLoaded({ name: componentName, Component: componentName });
+      return undefined;
     }
+    let current = true;
+    Promise.resolve(moduleCache.getExport(componentName)).then((Component) => {
+      if (current) {
+        setLoaded({ name: componentName, Component });
+      }
+    });
+    return () => {
+      current = false;
+    };
   }, [componentName, moduleCache]);
 
-  useEffect(async () => {
-    if (!isThenable(Component)) {
-      return;
-    }
-    const comp = await Component;
-    setComponent(() => comp);
-  }, [Component]);
-
-  if (!Component || isThenable(Component)) {
+  const { name, Component } = loaded;
+  if (name !== componentName || !Component) {
     return null;
   }
 

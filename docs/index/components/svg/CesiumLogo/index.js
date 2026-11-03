@@ -1,7 +1,7 @@
 import html from 'html';
 
 export default (props) => html`
-  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="360" height="77" viewBox="0 0 177 38">
+  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="360" height="77" viewBox="0 0 177 38" ...${props}>
     <circle cx="18.5" cy="18.5" r="18.5" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:1.1;paint-order:markers stroke fill"/>
     <path d="M10.7 63.9c-.2-.3-.3-1.4-.3-4 0-3.1 0-3.9.6-5.4 1.2-3.4 3.5-6.3 6.5-8.4 2.7-1.8 4.7-2.4 8.2-2.6 3.5-.2 5 .1 8 1.5 3.5 1.7 6.8 5.2 8 8.5l.5 1.3-1 .1c-1.5.3-2.2 1-5 4.7-3.2 4.3-3.7 4.7-4.5 4.7-.9 0-1.3-.5-4.5-4.6a38 38 0 0 0-3.1-3.9 3.4 3.4 0 0 0-3.9-.5c-1 .4-1.6 1.2-4.1 4.4L12.7 64c-.6.5-1.5.4-2-.1zm22.6-10.7c.3-.3.5-.8.5-1 0-.8-1-1.9-1.7-1.9s-1.7 1-1.7 1.8.8 1.6 1.7 1.6a2 2 0 0 0 1.2-.5z" style="fill:#6caae3" transform="translate(-8.3 -41.3)"/>
     <path d="M22.3 75.7a16.7 16.7 0 0 1-10-7.7l-.4-1 1.1-.4c1-.4 1.6-1 4.4-4.7 3.3-4.2 4-4.9 5-4.3.2.2 1.6 1.8 3 3.8 1.5 1.9 3 3.8 3.5 4.2 1.5 1.6 3.6 1.7 5.2.4.4-.4 1.9-2.1 3.2-3.9l3-4c.8-.7 1.9-.9 2.4-.3.5.4.4 3 0 5.3a16.8 16.8 0 0 1-12.2 12.7c-2.1.6-6.2.5-8.2 0z" style="fill:#6f9b48" transform="translate(-8.3 -41.3)"/>

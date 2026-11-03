@@ -9,7 +9,8 @@
     "preEducation",
     "school",
     "clientWork",
-    "current",
+    "smart-construction",
+    "ion",
     "skillsTitle",
     "ecosystem",
     "flexibility",
@@ -24,6 +25,11 @@
     "portfolioRSuite",
     "portfolioToys",
     "portfolioFAO",
-    "portfolioVectrix"
+    "portfolioVectrix",
+    "blogTitle",
+    "blogEmpty",
+    "blogBack",
+    "blogUntranslated",
+    "blogLoadError"
   ]
 }

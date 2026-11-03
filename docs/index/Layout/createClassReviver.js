@@ -1,4 +1,4 @@
-import { joinClass } from "../classes.js";
+import { joinClass } from "../rendering/classes.js";
 
 export default (moduleCache) => (key, value) => {
   if (
