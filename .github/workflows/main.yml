@@ -89,6 +89,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Mount the site under /${{ github.event.repository.name }}/
+        # Staging is served from a subfolder, not a domain root. Point <base>
+        # there; the router and links take their prefix from it. 404.html lets
+        # deep links like /about boot the app instead of a GitHub error page.
+        run: |
+          BASE='<base href="/${{ github.event.repository.name }}/index" />'
+          grep -q '<base href="/index" />' docs/index.html
+          sed -i "s#<base href=\"/index\" />#${BASE}#" docs/index.html
+          grep -qF "$BASE" docs/index.html
+          cp docs/index.html docs/404.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

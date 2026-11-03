@@ -1,18 +1,19 @@
 import { createElement } from 'preact';
 import { useEffect } from 'preact/hooks';
-import useUrl from '../hooks/useUrl.js';
+import useUrl, { toHref, toRoute } from '../hooks/useUrl.js';
 import Layout from './Layout.js';
 
 export default ({ index, Loading, ...props }) => {
   const url = useUrl();
+  const route = toRoute(url.pathname);
   useEffect(() => {
-    if (url.pathname === '/') {
-      window.location.replace(index);
+    if (route === '/') {
+      window.location.replace(toHref(index));
     }
-  }, [url]);
+  }, [route]);
   return createElement(Layout, {
     ...props,
     Loading,
-    layoutName: `${url.pathname.replace(/^\//, '')}`,
+    layoutName: route.replace(/^\//, ''),
   });
 };

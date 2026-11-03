@@ -57,6 +57,11 @@ const GENERATED = [
 // Content, not code: links inside these aren't checked for drift.
 const CONTENT = [/^blog\//, /^docs\/index\/api\/blog\//, /^docs\/index\/res\//];
 
+// Files a workflow creates during a run, so they never exist in the tree.
+const CI_OUTPUTS = new Set([
+  "docs/404.html", // staging deep-link fallback (main.yml, deploy_to_staging)
+]);
+
 const JUNK_NAMES = /^(utils?|misc|helpers?|lib|core|tools|common|shared)$/i;
 const MAX_DIR_FILES = 50;
 
@@ -142,7 +147,12 @@ for (const file of files.filter(isText)) {
     const target = resolveRef(ref, file);
     if (target && target !== "external") {
       live.add(target);
-    } else if (!target && !isContent && looksLocal(ref)) {
+    } else if (
+      !target &&
+      !isContent &&
+      !CI_OUTPUTS.has(normalize(ref)) &&
+      looksLocal(ref)
+    ) {
       broken.push(`${file}: "${ref}" does not exist`);
     }
   }
